@@ -1,0 +1,24 @@
+{
+  "name": "werkstatt",
+  "version": "1.0.0",
+  "description": "Useful functions to encapsulate common scenarios",
+  "main": "werkstatt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sk8Guerra/werkstatt.git"
+  },
+  "keywords": [
+    "tools",
+    "utils"
+  ],
+  "author": "Coco Guerra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sk8Guerra/werkstatt/issues"
+  },
+  "homepage": "https://github.com/sk8Guerra/werkstatt#readme"
+}
