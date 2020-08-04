@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.2.0 (Aug 4, 2020)
+
+🛠 Features:
+
+  - insertAt
+
+[commit](https://github.com/sk8Guerra/werkstatt/commit/afd476c4e565da681ab1a219694355e5d0c487f8)
+
 ## 1.1.0 (Aug 4, 2020)
 
 🛠 Features:
