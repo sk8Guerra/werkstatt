@@ -20,19 +20,25 @@ yarn add werkstatt
 
 ### roundUp
 
+##### Arguments
+
+| argument | type | 
+|-----------|------|
+| number    | float|
+
 ```javascript
 const { roundUp } = require('werkstatt');
 
 roundUp(3.2) // -> 4
 ```
 
-##### Parameters
-
-| parameter | type | 
-|-----------|------|
-| number    | float|
-
 ### roundDown
+
+##### Arguments
+
+| argument | type  |
+|-----------|-------|
+| number    | float |
 
 ```javascript
 const { roundDown } = require('werkstatt');
@@ -40,27 +46,22 @@ const { roundDown } = require('werkstatt');
 roundDown(3.8) // -> 3
 ```
 
-##### Parameters
-
-| parameter | type  |
-|-----------|-------|
-| number    | float |
-
 ### isEmpty
+
+##### Arguments
+
+| argument | type |
+|-----------|------|
+| param     | any  |
 
 ```javascript
 const { isEmpty } = require('werkstatt');
 
-isEmpty({}) // -> true
-isEmpty({"hola": "adios"}) // -> false
-isEmpty([]) // -> true
-isEmpty("") // -> true
-isEmpty(3) // -> true
-isEmpty(true) // -> true
+isEmpty({}); // -> true
+isEmpty({"hola": "adios"}); // -> false
+isEmpty([]); // -> true
+isEmpty(""); // -> true
+isEmpty(3); // -> true
+isEmpty(true); // -> true
 ```
-
-##### Parameters
-
-| parameter | type |
-|-----------|------|
-| param     | any  |
+> Note: `isEmpty` currently supports array, object and string only.
