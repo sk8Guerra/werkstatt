@@ -17,6 +17,7 @@ yarn add werkstatt
 * [roundUp](#roundUp)
 * [roundDown](#roundDown)
 * [isEmpty](#isEmpty)
+* [insertAt](#insertAt)
 
 ### roundUp
 
@@ -65,3 +66,19 @@ isEmpty(3); // -> true
 isEmpty(true); // -> true
 ```
 > Note: `isEmpty` currently supports array, object and string only.
+
+### insertAt
+
+##### Arguments
+
+| argument | type | description |
+|-----------|------|------------|
+| array     | any  | where the element will be inserted.
+| index     | any  | at which the element will be inserted.
+| elementToInsert | any  | element to insert in the array.
+
+```javascript
+const { insertAt } = require('werkstatt');
+
+insertAt([1, 2, 3], 1, 4); // -> [1, 4, 2, 3]
+```

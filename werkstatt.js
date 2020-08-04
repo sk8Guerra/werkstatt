@@ -19,8 +19,17 @@ function isEmpty(param) {
   return true;
 }
 
+function insertAt(array, index, elementToInsert) {
+  var newArray = [...array];
+  newArray.splice(index, 0, elementToInsert);
+  return newArray;
+};
+
+console.log(insertAt([1, 2, 3], 1, 4));
+
 module.exports = {
   roundUp,
   roundDown,
-  isEmpty
+  isEmpty,
+  insertAt
 };
