@@ -1,6 +1,6 @@
 {
   "name": "werkstatt",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Useful functions to encapsulate common scenarios",
   "main": "werkstatt.js",
   "scripts": {

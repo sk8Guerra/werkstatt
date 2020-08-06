@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 1.3.0 (Aug 6, 2020)
+
+🛠 Features:
+
+  - isNumber
+  - isNegative
+  - isOdd
+  - isEven
+  - isZero
+
+[commit](https://github.com/sk8Guerra/werkstatt/commit/30e5381fcf569487c2eada5dd5f18c2a3d282fd1)
+
 ## 1.2.0 (Aug 4, 2020)
 
 🛠 Features:
