@@ -4,7 +4,7 @@
   "description": "Useful functions to encapsulate common scenarios",
   "main": "werkstatt.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "sideEffects": false,
   "repository": {
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/sk8Guerra/werkstatt/issues"
   },
-  "homepage": "https://github.com/sk8Guerra/werkstatt#readme"
+  "homepage": "https://github.com/sk8Guerra/werkstatt#readme",
+  "devDependencies": {
+    "jest": "^26.2.2"
+  }
 }

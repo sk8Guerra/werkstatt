@@ -2,6 +2,8 @@
 
 🛠 Useful functions to encapsulate common scenarios.
 
+> Currently can't be used in a browser.
+
 ## 📦 Install
 
 ```bash
@@ -18,6 +20,12 @@ yarn add werkstatt
 * [roundDown](#roundDown)
 * [isEmpty](#isEmpty)
 * [insertAt](#insertAt)
+* [isNumber](#isNumber)
+* [isNegative](#isNegative)
+* [isOdd](#isOdd)
+* [isEven](#isEven)
+* [isZero](#isZero)
+* more coming soon ✨
 
 ### roundUp
 
@@ -81,4 +89,89 @@ isEmpty(true); // -> true
 const { insertAt } = require('werkstatt');
 
 insertAt([1, 2, 3], 1, 4); // -> [1, 4, 2, 3]
+```
+
+### isNumber
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | any  | will be tested if it is number or not | boolean |
+
+```javascript
+const { isNumber } = require('werkstatt');
+
+isNumber(54); // -> true
+isNumber({"hola": "adios"}); // -> false
+isNumber([]); // -> false
+isNumber(""); // -> false
+isNumber(3); // -> true
+isNumber(true); // -> false
+```
+
+> NOTE: this is an implementation of [is-number](https://www.npmjs.com/package/is-number) package.
+
+### isNegative
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | number  | will be tested if it is negative number or not | boolean |
+
+```javascript
+const { isNegative } = require('werkstatt');
+
+isNegative(-54); // -> true
+isNegative(4); // -> false
+```
+
+### isOdd
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | number  | will be tested if it is odd number or not | boolean |
+
+```javascript
+const { isOdd } = require('werkstatt');
+
+isOdd(7); // -> true
+isOdd(4); // -> false
+```
+
+> NOTE: this is an implementation of [is-odd](https://www.npmjs.com/package/is-odd) package.
+
+### isEven
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | number  | will be tested if it is even number or not | boolean |
+
+```javascript
+const { isEven } = require('werkstatt');
+
+isEven(7); // -> false
+isEven(4); // -> true
+```
+
+> NOTE: this is an implementation of [is-even](https://www.npmjs.com/package/is-even) package.
+
+### isZero
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | number  | will be tested if it is 0 or not | boolean |
+
+```javascript
+const { isZero } = require('werkstatt');
+
+isZero(7); // -> false
+isZero(0); // -> true
 ```
