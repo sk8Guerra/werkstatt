@@ -2,8 +2,6 @@
 
 🛠 Useful functions to encapsulate common scenarios.
 
-> Currently can't be used in a browser.
-
 ## 📦 Install
 
 ```bash
