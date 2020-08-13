@@ -61,6 +61,15 @@ function isZero (number) {
   return number === 0;
 };
 
+function isUndefined(value) {
+  return typeof(value) === 'undefined';
+}
+
+function isEmail(value) {
+    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(String(value).toLowerCase());
+}
+
 module.exports = {
   roundUp,
   roundDown,
@@ -70,5 +79,7 @@ module.exports = {
   isNegative,
   isOdd,
   isEven,
-  isZero
+  isZero,
+  isUndefined,
+  isEmail
 };
