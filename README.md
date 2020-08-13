@@ -23,6 +23,8 @@ yarn add werkstatt
 * [isOdd](#isOdd)
 * [isEven](#isEven)
 * [isZero](#isZero)
+* [isEmail](#isEmail)
+* [isUndefined](#isUndefined)
 * more coming soon ✨
 
 ### roundUp
@@ -172,4 +174,35 @@ const { isZero } = require('werkstatt');
 
 isZero(7); // -> false
 isZero(0); // -> true
+```
+
+### isEmail
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | string  | will be tested if it satisfies an email format | boolean |
+
+```javascript
+const { isEmail } = require('werkstatt');
+
+isEmail("a@a.c"); // -> false
+isEmail("a@a.co"); // -> true
+```
+> Best regex [found out there](https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript).
+
+### isUndefined
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | any  | will be tested if is undefined or not | boolean |
+
+```javascript
+const { isUndefined } = require('werkstatt');
+
+isUndefined(); // -> true
+isUndefined("a@a.co"); // -> false
 ```

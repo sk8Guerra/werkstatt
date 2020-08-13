@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 1.3.0 (Aug 13, 2020)
+
+🛠 Features:
+
+  - isEmail
+  - isUndefined
+
+[commit](https://github.com/sk8Guerra/werkstatt/commit/5d4eb727bc9430b676a80cd3e533cc7b093ce0b9)
+
 ## 1.3.0 (Aug 6, 2020)
 
 🛠 Features:
