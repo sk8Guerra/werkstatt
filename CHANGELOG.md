@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 1.3.0 (Aug 13, 2020)
+## 1.4.0 (Aug 13, 2020)
 
 🛠 Features:
 
