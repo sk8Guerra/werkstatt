@@ -14,6 +14,8 @@ const { roundUp } = require('./src/float/roundUp');
 const { roundDown } = require('./src/float/roundDown');
 const { isFloat } = require('./src/float/isFloat');
 
+const { capitalizeFirstLetter } = require('./src/string/capitalizeFirstLetter');
+
 function isEmpty(param) {
   if (typeof(param) === 'string') {
     return isLengthOf(param.trim(), 0);
@@ -69,5 +71,6 @@ module.exports = {
   isLengthOf,
   subtract,
   isFloat,
-  typeOf
+  typeOf,
+  capitalizeFirstLetter
 };

@@ -40,6 +40,7 @@ yarn add werkstatt
 * [subtract](#subtract)
 * [isFloat](#isFloat)
 * [typeOf](#typeOf)
+* [capitalizeFirstLetter](#capitalizeFirstLetter)
 * more coming soon ✨
 
 ### roundUp
@@ -320,3 +321,20 @@ typeOf(true); // -> 'boolean'
 typeOf(() => {}); // -> 'function'
 typeOf(6); // -> number
 ```
+
+### capitalizeFirstLetter
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | string  | srting to capitalize first letter | string |
+
+```javascript
+const { capitalizeFirstLetter } = require('werkstatt');
+
+capitalizeFirstLetter('hola'); // -> 'Hola'
+capitalizeFirstLetter('adios'); // -> 'Adios'
+```
+
+> NOTE: this is an implementation of a [Flavio's function](https://flaviocopes.com/how-to-uppercase-first-letter-javascript/)
