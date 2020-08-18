@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.6.0 (Aug 18, 2020)
+
+🛠 Features:
+  - capitalizeFirstLetter
+
+[commit](https://github.com/sk8Guerra/werkstatt/commit/64425255038b65fa0aeeaeeccaef27ffe2f7eb96)
+
 ## 1.5.0 (Aug 18, 2020)
 
 🛠 Features:
