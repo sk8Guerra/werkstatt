@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 1.5.0 (Aug 18, 2020)
+
+🛠 Features:
+  - orderAsc
+  - lengthOf
+  - isLengthOf
+  - subtract
+  - typeOf
+
+[commit](https://github.com/sk8Guerra/werkstatt/commit/f651c2a8c71b25e7991a12e2f7e4e5d2f523f061)
+
 ## 1.4.0 (Aug 13, 2020)
 
 🛠 Features:
