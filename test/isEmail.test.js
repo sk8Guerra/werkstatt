@@ -10,4 +10,5 @@ test('if the passed argument is undefined', () => {
     expect(isEmail("alo")).toEqual(false);
     expect(isEmail("alo.le.@gmailcom")).toEqual(false);
     expect(isEmail("alo.le.gmailcom")).toEqual(false);
+    expect(isEmail("205820@lol_lol.com")).toEqual(false);
 });

@@ -1,65 +1,31 @@
-function roundUp(number) {
-  return Math.ceil(number);
-}
+const { orderAsc } = require("./src/array/orderAsc");
+const { lengthOf } = require("./src/array/lengthOf");
+const { isLengthOf } = require("./src/array/isLengthOf");
+const { insertAt } = require("./src/array/insertAt");
 
-function roundDown(number) {
-  return Math.floor(number);
-}
+const { subtract } = require("./src/number/subtract");
+const { isZero } = require('./src/number/isZero');
+const { isEven } = require('./src/number/isEven');
+const { isOdd } = require('./src/number/isOdd');
+const { isNumber } = require('./src/number/isNumber');
+const { isNegative } = require('./src/number/isNegative');
+
+const { roundUp } = require('./src/float/roundUp');
+const { roundDown } = require('./src/float/roundDown');
+const { isFloat } = require('./src/float/isFloat');
 
 function isEmpty(param) {
   if (typeof(param) === 'string') {
-    return param.trim().length === 0;
+    return isLengthOf(param.trim(), 0);
   }
   if(Object.getPrototypeOf(param) === Object.prototype) {
-    return Object.keys(param).length === 0;
+    return isLengthOf(Object.keys(param), 0);
   }
   if (Object.getPrototypeOf(param) === Array.prototype) {
-    return param.length === 0;
+    return isLengthOf(param, 0);
   }
   return true;
 }
-
-function insertAt(array, index, elementToInsert) {
-  var newArray = [...array];
-  newArray.splice(index, 0, elementToInsert);
-  return newArray;
-};
-
-function isNumber (value) {
-  if (typeof value === 'number') {
-    return value - value === 0;
-  }
-  if (typeof value === 'string' && value.trim() !== '') {
-    return Number.isFinite ? Number.isFinite(+value) : isFinite(+value);
-  }
-  return false;
-};
-
-function isNegative(value) {
-  return Math.sign(value) === -1;
-}
-
-function isOdd(value) {
-  const n = Math.abs(value);
-  if (!isNumber(n)) {
-    throw new TypeError('expected a number');
-  }
-  if (!Number.isInteger(n)) {
-    throw new Error('expected an integer');
-  }
-  if (!Number.isSafeInteger(n)) {
-    throw new Error('value exceeds maximum safe integer');
-  }
-  return (n % 2) === 1;
-};
-
-function isEven(value) {
-  return !isOdd(value);
-};
-
-function isZero (number) {
-  return number === 0;
-};
 
 function isUndefined(value) {
   return typeof(value) === 'undefined';
@@ -68,6 +34,22 @@ function isUndefined(value) {
 function isEmail(value) {
     const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regex.test(String(value).toLowerCase());
+}
+
+function typeOf(value) {
+  if (String(value) === 'null') return 'null';
+  if (typeof(value) === 'undefined') return 'undefined';
+  if (typeof(value) === 'string') return 'string';
+  if (typeof(value) === 'boolean') return 'boolean';
+  if (typeof(value) === 'function') return 'function';
+  if (typeof(value) === 'symbol') return 'symbol';
+  if(typeof(value) === 'number') {
+    if (isFloat(value)) return 'float'
+    return 'number'
+  }
+  if (value instanceof Array) return 'array';
+  if (value instanceof Object) return 'object';
+  return typeof(value);
 }
 
 module.exports = {
@@ -81,5 +63,11 @@ module.exports = {
   isEven,
   isZero,
   isUndefined,
-  isEmail
+  isEmail,
+  orderAsc,
+  lengthOf,
+  isLengthOf,
+  subtract,
+  isFloat,
+  typeOf
 };

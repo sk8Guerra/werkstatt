@@ -2,6 +2,15 @@
 
 🛠 Useful functions to encapsulate common scenarios.
 
+As described [here](https://github.com/ryanmcdermott/clean-code-javascript#encapsulate-conditionals), is good to encapsulate conditionals to make our code more readable, reusable and avoid ambiguities. Also to avoid potential bugs due to some javascript features are error-prone:
+
+```javascript
+let name = null;
+typeof name; // "object"
+```
+
+Clearly, `null` is  not an object. More of that 👉🏼[here](https://2ality.com/2013/10/typeof-null.html).
+
 ## 📦 Install
 
 ```bash
@@ -25,6 +34,12 @@ yarn add werkstatt
 * [isZero](#isZero)
 * [isEmail](#isEmail)
 * [isUndefined](#isUndefined)
+* [orderAsc](#orderAsc)
+* [lengthOf](#lengthOf)
+* [isLengthOf](#isLengthOf)
+* [subtract](#subtract)
+* [isFloat](#isFloat)
+* [typeOf](#typeOf)
 * more coming soon ✨
 
 ### roundUp
@@ -205,4 +220,103 @@ const { isUndefined } = require('werkstatt');
 
 isUndefined(); // -> true
 isUndefined("a@a.co"); // -> false
+```
+
+### orderAsc
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | array<number>  | will order the list in ascending mode | array (ordened) |
+
+```javascript
+const { orderAsc } = require('werkstatt');
+
+orderAsc([8, 10, 6]); // -> [6, 8, 10]
+```
+
+> NOTE: this is an implementation of [quicksort algorithm](https://en.wikipedia.org/wiki/Quicksort)
+
+### lengthOf
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | array, string, json  | length of the passed argument | number |
+
+```javascript
+const { lengthOf } = require('werkstatt');
+
+lengthOf([8, 10, 6]); // -> 3
+```
+
+### isLengthOf
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | array, string, json  | test if the first argument has the desired length (that specified in the second argument) | boolean |
+
+```javascript
+const { isLengthOf } = require('werkstatt');
+
+isLengthOf([8, 10, 6], 3); // -> true
+isLengthOf("hola", 0); // -> false
+isLengthOf({name: "Jorge", lasName: "Guerra"}, 2) // -> true
+```
+
+### subtract
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| values     | number  | numbers that will be subtrtacted | number |
+
+```javascript
+const { subtract } = require('werkstatt');
+
+subtract(6, 3); // -> 3
+```
+
+> NOTE: currently it only supports two numbers as paremeters.
+
+### isFloat
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | number, float  | will be tested if is or not float | boolean |
+
+```javascript
+const { isFloat } = require('werkstatt');
+
+isFloat(6); // -> false
+isFloat(6.5); // -> true
+```
+
+### typeOf
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | any  | will get the type of a passed value | string |
+
+```javascript
+const { typeOf } = require('werkstatt');
+
+typeOf(6.5); // -> float
+typeOf([]); // -> array
+typeOf({}); // -> object
+typeOf(null); // -> 'null'
+typeOf(undefined); // -> 'undefined'
+typeOf('undefined'); // -> 'string'
+typeOf(true); // -> 'boolean'
+typeOf(() => {}); // -> 'function'
+typeOf(6); // -> number
 ```
