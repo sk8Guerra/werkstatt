@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.0 (Aug 18, 2020)
+
+🛠 Features:
+  - divide
+
+[commit](https://github.com/sk8Guerra/werkstatt/commit/db5c48bf9e2f40e30c16fa00048d5e9105f41a97)
+
 ## 1.7.0 (Aug 18, 2020)
 
 🛠 Features:
