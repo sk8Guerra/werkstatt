@@ -2,6 +2,7 @@ const { orderAsc } = require("./src/array/orderAsc");
 const { lengthOf } = require("./src/array/lengthOf");
 const { isLengthOf } = require("./src/array/isLengthOf");
 const { insertAt } = require("./src/array/insertAt");
+const { isArrayOfNumbers } = require("./src/array/isArrayOfNumbers");
 
 const { subtract } = require("./src/number/subtract");
 const { isZero } = require('./src/number/isZero');
@@ -9,6 +10,7 @@ const { isEven } = require('./src/number/isEven');
 const { isOdd } = require('./src/number/isOdd');
 const { isNumber } = require('./src/number/isNumber');
 const { isNegative } = require('./src/number/isNegative');
+const { add } = require('./src/number/add');
 
 const { roundUp } = require('./src/float/roundUp');
 const { roundDown } = require('./src/float/roundDown');
@@ -72,5 +74,7 @@ module.exports = {
   subtract,
   isFloat,
   typeOf,
-  capitalizeFirstLetter
+  capitalizeFirstLetter,
+  add,
+  isArrayOfNumbers
 };

@@ -41,6 +41,8 @@ yarn add werkstatt
 * [isFloat](#isFloat)
 * [typeOf](#typeOf)
 * [capitalizeFirstLetter](#capitalizeFirstLetter)
+* [add](#add)
+* [isArrayOfNumbers](#isArrayOfNumbers)
 * more coming soon ✨
 
 ### roundUp
@@ -328,7 +330,7 @@ typeOf(6); // -> number
 
 | argument | type | description |  returns   |
 |-----------|------|------------|------------|
-| value     | string  | srting to capitalize first letter | string |
+| value     | string  | string to capitalize first letter | string |
 
 ```javascript
 const { capitalizeFirstLetter } = require('werkstatt');
@@ -338,3 +340,34 @@ capitalizeFirstLetter('adios'); // -> 'Adios'
 ```
 
 > NOTE: this is an implementation of a [Flavio's function](https://flaviocopes.com/how-to-uppercase-first-letter-javascript/)
+
+### add
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| values     | number  | either an array of numbers or n args | number |
+
+```javascript
+const { add } = require('werkstatt');
+
+add(3, 6, 11); // -> 20
+const numbers = [1, 2, 3];
+add(...numbers); // -> 6
+```
+
+### isArrayOfNumbers
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| values     | number  | array to test | boolean |
+
+```javascript
+const { isArrayOfNumbers } = require('werkstatt');
+
+isArrayOfNumbers([3, 6, 11, 'hola']); // -> false
+isArrayOfNumbers([1, 2, 3]); // -> true
+```
