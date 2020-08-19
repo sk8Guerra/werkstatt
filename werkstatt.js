@@ -11,6 +11,7 @@ const { isOdd } = require('./src/number/isOdd');
 const { isNumber } = require('./src/number/isNumber');
 const { isNegative } = require('./src/number/isNegative');
 const { add } = require('./src/number/add');
+const { divide } = require('./src/number/divide');
 
 const { roundUp } = require('./src/float/roundUp');
 const { roundDown } = require('./src/float/roundDown');
@@ -76,5 +77,6 @@ module.exports = {
   typeOf,
   capitalizeFirstLetter,
   add,
-  isArrayOfNumbers
+  isArrayOfNumbers,
+  divide
 };

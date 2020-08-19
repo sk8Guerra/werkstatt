@@ -43,6 +43,7 @@ yarn add werkstatt
 * [capitalizeFirstLetter](#capitalizeFirstLetter)
 * [add](#add)
 * [isArrayOfNumbers](#isArrayOfNumbers)
+* [divide](#divide)
 * more coming soon ✨
 
 ### roundUp
@@ -370,4 +371,20 @@ const { isArrayOfNumbers } = require('werkstatt');
 
 isArrayOfNumbers([3, 6, 11, 'hola']); // -> false
 isArrayOfNumbers([1, 2, 3]); // -> true
+```
+
+### divide
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| dividend     | number  | the dividend of the operation | number |
+| divider     | number  | the divider of the operation | number |
+
+```javascript
+const { divide } = require('werkstatt');
+
+divide(100, 2); // -> 50
+divide(10, 5); // -> 2
 ```
