@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.7.0 (Aug 18, 2020)
+
+🛠 Features:
+  - add
+  - isArrayOfNumbers
+
+[commit](https://github.com/sk8Guerra/werkstatt/commit/b874e03a28f0febe2f072eef6b1094fb82b906df)
+
 ## 1.6.0 (Aug 18, 2020)
 
 🛠 Features:
