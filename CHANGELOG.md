@@ -11,7 +11,7 @@
 🐞 Bugs:
   - typeOf function was improved.
 
-[commit](https://github.com/sk8Guerra/werkstatt/commit/db5c48bf9e2f40e30c16fa00048d5e9105f41a97)
+[commit](https://github.com/sk8Guerra/werkstatt/commit/72bd91ae33997bff48b7940efb65779e29d0e010)
 
 ## 1.8.0 (Aug 18, 2020)
 
