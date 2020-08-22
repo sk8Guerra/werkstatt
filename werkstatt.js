@@ -12,6 +12,7 @@ const { isNumber } = require('./src/number/isNumber');
 const { isNegative } = require('./src/number/isNegative');
 const { add } = require('./src/number/add');
 const { divide } = require('./src/number/divide');
+const { isGreaterThan } = require('./src/number/isGreaterThan');
 
 const { roundUp } = require('./src/float/roundUp');
 const { roundDown } = require('./src/float/roundDown');
@@ -42,7 +43,7 @@ function isEmail(value) {
 }
 
 function typeOf(value) {
-  if (String(value) === 'null') return 'null';
+  if (String(value) === 'null' && typeof(value) === 'object') return 'null';
   if (typeof(value) === 'undefined') return 'undefined';
   if (typeof(value) === 'string') return 'string';
   if (typeof(value) === 'boolean') return 'boolean';
@@ -56,6 +57,26 @@ function typeOf(value) {
   if (value instanceof Object) return 'object';
   return typeof(value);
 }
+
+function areEqual(...values) {
+  const [firstValue, secondValue] = values;
+  return firstValue === secondValue;
+}
+
+function isDefined(value) {
+  if (areEqual(typeOf(value), 'undefined') || areEqual(typeOf(value), 'null')) return false;
+  return true;
+}
+
+function has(item, propOrValue) {
+  if (areEqual(typeOf(item), 'array')) {
+    return item.includes(propOrValue);
+  }
+  if(areEqual(typeOf(item), 'object')) {
+    return propOrValue in item;
+  }
+}
+
 
 module.exports = {
   roundUp,
@@ -78,5 +99,9 @@ module.exports = {
   capitalizeFirstLetter,
   add,
   isArrayOfNumbers,
-  divide
+  divide,
+  areEqual,
+  isDefined,
+  isGreaterThan,
+  has
 };

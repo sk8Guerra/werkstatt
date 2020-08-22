@@ -44,6 +44,10 @@ yarn add werkstatt
 * [add](#add)
 * [isArrayOfNumbers](#isArrayOfNumbers)
 * [divide](#divide)
+* [areEqual](#areEqual)
+* [isDefined](#isDefined)
+* [isGreaterThan](#isGreaterThan)
+* [has](#has)
 * more coming soon ✨
 
 ### roundUp
@@ -387,4 +391,75 @@ const { divide } = require('werkstatt');
 
 divide(100, 2); // -> 50
 divide(10, 5); // -> 2
+```
+
+### areEqual
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| firstValue     | any  | first arg to compare | boolean |
+| secondValue     | any  | second arg to compare | boolean |
+
+```javascript
+const { areEqual } = require('werkstatt');
+
+areEqual(100, 2); // -> false
+var name;
+areEqual(typeOf(name), 'undefined'); // -> true
+```
+
+> NOTE: This function supports primitive values only because objects are not compared by value but by reference. 
+
+### isDefined
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | any  | will be tested if is or not defined | boolean |
+
+```javascript
+const { isDefined } = require('werkstatt');
+
+isDefined(100); // -> true
+var name;
+isDefined(name); // -> false
+
+var age = null;
+isDefined(age); // -> false
+isDefined({}); // -> true
+```
+
+### isGreaterThan
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| firstArgument     | number  | first value to be evaluated | boolean |
+| secondArgument     | number  | second value to be evaluated | boolean |
+
+```javascript
+const { isGreaterThan } = require('werkstatt');
+
+isGreaterThan(100, 50); // -> true
+isGreaterThan(1, 50); // -> false
+```
+
+### isGreaterThan
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| firstArgument     | number  | first value to be evaluated | boolean |
+| secondArgument     | number  | second value to be evaluated | boolean |
+
+```javascript
+const { has } = require('werkstatt');
+
+has(has([3, 5], 3); // -> true
+has(["Hola", "adios"], "true"); // -> false
 ```
