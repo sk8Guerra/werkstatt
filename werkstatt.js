@@ -20,6 +20,9 @@ const { isFloat } = require('./src/float/isFloat');
 
 const { capitalizeFirstLetter } = require('./src/string/capitalizeFirstLetter');
 
+const { typeOf } = require('./src/other/typeOf');
+const { areEqual } = require('./src/other/areEqual');
+
 function isEmpty(param) {
   if (typeof(param) === 'string') {
     return isLengthOf(param.trim(), 0);
@@ -42,27 +45,6 @@ function isEmail(value) {
     return regex.test(String(value).toLowerCase());
 }
 
-function typeOf(value) {
-  if (String(value) === 'null' && typeof(value) === 'object') return 'null';
-  if (typeof(value) === 'undefined') return 'undefined';
-  if (typeof(value) === 'string') return 'string';
-  if (typeof(value) === 'boolean') return 'boolean';
-  if (typeof(value) === 'function') return 'function';
-  if (typeof(value) === 'symbol') return 'symbol';
-  if(typeof(value) === 'number') {
-    if (isFloat(value)) return 'float'
-    return 'number'
-  }
-  if (value instanceof Array) return 'array';
-  if (value instanceof Object) return 'object';
-  return typeof(value);
-}
-
-function areEqual(...values) {
-  const [firstValue, secondValue] = values;
-  return firstValue === secondValue;
-}
-
 function isDefined(value) {
   if (areEqual(typeOf(value), 'undefined') || areEqual(typeOf(value), 'null')) return false;
   return true;
@@ -76,7 +58,6 @@ function has(item, propOrValue) {
     return propOrValue in item;
   }
 }
-
 
 module.exports = {
   roundUp,
