@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.9.2 (Aug 21, 2020)
+
+🐞 Bugs:
+  - isLengthOf function was improved.
+
+[commit](https://github.com/sk8Guerra/werkstatt/commit/17383bcb8440381daa4cbe0748c7b5fc65d849be)
+
 ## 1.9.1 (Aug 21, 2020)
 
 🛠 Features:
