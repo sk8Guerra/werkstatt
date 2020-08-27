@@ -448,7 +448,7 @@ isGreaterThan(100, 50); // -> true
 isGreaterThan(1, 50); // -> false
 ```
 
-### isGreaterThan
+### has
 
 ##### Arguments
 
@@ -460,6 +460,6 @@ isGreaterThan(1, 50); // -> false
 ```javascript
 const { has } = require('werkstatt');
 
-has(has([3, 5], 3); // -> true
+has([3, 5], 3); // -> true
 has(["Hola", "adios"], "true"); // -> false
 ```
