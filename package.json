@@ -1,15 +1,17 @@
 {
   "name": "werkstatt",
-  "version": "1.9.2",
+  "version": "0.0.0-development",
   "description": "Useful functions to encapsulate common scenarios",
   "main": "werkstatt.js",
   "scripts": {
-    "test": "jest"
+    "commit": "git-cz",
+    "test": "jest",
+    "semantic-release": "semantic-release"
   },
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sk8Guerra/werkstatt.git"
+    "url": "https://github.com/sk8Guerra/werkstatt.git"
   },
   "keywords": [
     "tools",
@@ -22,6 +24,12 @@
   },
   "homepage": "https://github.com/sk8Guerra/werkstatt#readme",
   "devDependencies": {
-    "jest": "^26.2.2"
+    "jest": "^26.2.2",
+    "semantic-release": "^17.1.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   }
 }
