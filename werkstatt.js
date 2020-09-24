@@ -59,6 +59,10 @@ function has(item, propOrValue) {
   }
 }
 
+function isNull(value) {
+  return areEqual(typeOf(value), 'null');
+}
+
 module.exports = {
   roundUp,
   roundDown,
@@ -84,5 +88,6 @@ module.exports = {
   areEqual,
   isDefined,
   isGreaterThan,
-  has
+  has,
+  isNull
 };
