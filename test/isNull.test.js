@@ -9,4 +9,5 @@ test('if the passed arguments is null', () => {
     expect(isNull(lastName)).toEqual(false);
     expect(isNull(3)).toEqual(false);
     expect(isNull(["hola"])).toEqual(false);
+    expect(isNull({})).toEqual(false);
 });
