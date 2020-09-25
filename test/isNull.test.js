@@ -10,4 +10,5 @@ test('if the passed arguments is null', () => {
     expect(isNull(3)).toEqual(false);
     expect(isNull(["hola"])).toEqual(false);
     expect(isNull({})).toEqual(false);
+    expect(isNull(new Date)).toEqual(false);
 });
