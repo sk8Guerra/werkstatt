@@ -2,6 +2,8 @@
 
 🛠 Useful functions to encapsulate common scenarios.
 
+[![travis build](https://img.shields.io/travis/sk8guerra/werkstatt)](https://travis-ci.org/github/sk8Guerra/werkstatt)
+
 As described [here](https://github.com/ryanmcdermott/clean-code-javascript#encapsulate-conditionals), is good to encapsulate conditionals to make our code more readable, reusable and avoid ambiguities. Also to avoid potential bugs due to some javascript features are error-prone:
 
 ```javascript
