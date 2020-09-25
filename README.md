@@ -48,6 +48,7 @@ yarn add werkstatt
 * [isDefined](#isDefined)
 * [isGreaterThan](#isGreaterThan)
 * [has](#has)
+* [isNull](#isNull)
 * more coming soon ✨
 
 ### roundUp
@@ -462,4 +463,20 @@ const { has } = require('werkstatt');
 
 has([3, 5], 3); // -> true
 has(["Hola", "adios"], "true"); // -> false
+```
+
+### isNull
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | any  | value to be evaluated | boolean |
+
+```javascript
+const { isNull } = require('werkstatt');
+
+var name = null;
+isNull(name); // -> true
+isNull("Hola"); // -> false
 ```
