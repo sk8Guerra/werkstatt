@@ -8,7 +8,10 @@
     "test": "jest",
     "semantic-release": "semantic-release",
     "prebuild": "rimraf dist",
-    "build": "babel --out-dir dist src"
+    "build": "npm-run-all --parallel build:*",
+    "build:main": "babel --out-dir dist src",
+    "build:umd": "webpack --output-filename index.umd.js",
+    "build:umd.min": "webpack --output-filename index.umd.min.js -p"
   },
   "files": [
     "dist",
@@ -44,13 +47,20 @@
     "@babel/plugin-syntax-import-meta": "^7.0.0",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-es2015": "^7.0.0-beta.53",
+    "all": "0.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.4.2",
+    "babel-loader": "^8.1.0",
     "commitizen": "^4.2.1",
     "cz-conventional-changelog": "^3.3.0",
     "jest": "^26.2.2",
+    "json-loader": "^0.5.7",
+    "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
-    "semantic-release": "^17.1.2"
+    "run": "^1.4.0",
+    "semantic-release": "^17.1.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   },
   "config": {
     "commitizen": {
