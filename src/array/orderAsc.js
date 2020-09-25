@@ -1,5 +1,5 @@
-const { subtract } = require("../number/subtract");
-const { lengthOf } = require("./lengthOf");
+import subtract from '../number/subtract';
+import lengthOf from './lengthOf';
 
 function swap(items, firstIndex, secondIndex) {
   let temp = items[firstIndex];
@@ -44,4 +44,4 @@ function orderAsc(array) {
   return quickSort(array, 0, subtract(lengthOf(array), 1))
 }
 
-module.exports = { orderAsc };
+export default orderAsc;

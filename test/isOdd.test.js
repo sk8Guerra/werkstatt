@@ -1,4 +1,4 @@
-const { isOdd } = require('../werkstatt');
+const { isOdd } = require('../dist');
 
 test('if the passed argument is an odd number', () => {
     expect(isOdd(3)).toEqual(true);

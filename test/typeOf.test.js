@@ -1,4 +1,4 @@
-const { typeOf } = require('../werkstatt');
+const { typeOf } = require('../dist');
 
 test('if the passed value of type \'null\'', () => {
   let name = null;

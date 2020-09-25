@@ -1,4 +1,4 @@
-const { isLengthOf } = require('../werkstatt');
+const { isLengthOf } = require('../dist');
 
 test('calculates the length of a list', () => {
     expect(isLengthOf([3, 8, 9, 10, 5, "hola"], 6)).toBe(true);

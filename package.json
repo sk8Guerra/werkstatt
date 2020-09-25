@@ -2,12 +2,19 @@
   "name": "werkstatt",
   "version": "0.0.0-development",
   "description": "Useful functions to encapsulate common scenarios",
-  "main": "werkstatt.js",
+  "main": "dist/index.js",
   "scripts": {
     "commit": "git-cz",
     "test": "jest",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "prebuild": "rimraf dist",
+    "build": "babel --out-dir dist src"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "sideEffects": false,
   "repository": {
     "type": "git",
@@ -24,14 +31,51 @@
   },
   "homepage": "https://github.com/sk8Guerra/werkstatt#readme",
   "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.4.2",
     "commitizen": "^4.2.1",
     "cz-conventional-changelog": "^3.3.0",
     "jest": "^26.2.2",
+    "rimraf": "^3.0.2",
     "semantic-release": "^17.1.2"
   },
   "config": {
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
     }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "@babel/plugin-syntax-dynamic-import",
+      "@babel/plugin-syntax-import-meta",
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-json-strings",
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      "@babel/plugin-proposal-function-sent",
+      "@babel/plugin-proposal-export-namespace-from",
+      "@babel/plugin-proposal-numeric-separator",
+      "@babel/plugin-proposal-throw-expressions"
+    ]
   }
 }

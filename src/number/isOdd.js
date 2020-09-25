@@ -1,4 +1,4 @@
-const { isNumber } = require('./isNumber');
+import isNumber from './isNumber';
 
 function isOdd(value) {
   const n = Math.abs(value);
@@ -14,4 +14,4 @@ function isOdd(value) {
   return (n % 2) === 1;
 };
 
-module.exports = { isOdd };
+export default isOdd;

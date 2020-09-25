@@ -1,4 +1,4 @@
-const { isNumber } = require('../werkstatt');
+const { isNumber } = require('../dist');
 
 test('if the passed argument is number', () => {
     expect(isNumber(3)).toEqual(true);

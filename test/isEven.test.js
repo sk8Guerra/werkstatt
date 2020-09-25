@@ -1,4 +1,4 @@
-const { isEven } = require('../werkstatt');
+const { isEven } = require('../dist');
 
 test('if the passed argument is not an even number', () => {
     expect(isEven(3)).toEqual(false);

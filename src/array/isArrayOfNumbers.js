@@ -1,4 +1,4 @@
-const { isNumber } = require('../number/isNumber');
+import isNumber from '../number/isNumber';
 
 function isArrayOfNumbers(array) {
   for (let number = 0; number < array.length; number++) {
@@ -8,4 +8,4 @@ function isArrayOfNumbers(array) {
   return true;
 }
 
-module.exports = { isArrayOfNumbers };
+export default isArrayOfNumbers;

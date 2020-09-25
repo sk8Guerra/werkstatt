@@ -1,4 +1,4 @@
-const { divide } = require('../werkstatt');
+const { divide } = require('../dist');
 
 test('divide one number into another', () => {
     expect(divide(6, 3)).toBe(2);

@@ -1,4 +1,4 @@
-const { has } = require('../werkstatt');
+const { has } = require('../dist');
 
 test('if the second argument exists either as value in an array or as prop in a json', () => {
     expect(has([3, 5], 3)).toEqual(true);

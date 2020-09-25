@@ -1,4 +1,4 @@
-const { isDefined } = require('../werkstatt');
+const { isDefined } = require('../dist');
 
 test('if the passed argument is defined', () => {
     expect(isDefined(3)).toEqual(true);

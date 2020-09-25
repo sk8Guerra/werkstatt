@@ -1,4 +1,4 @@
-const { areEqual, typeOf } = require('../werkstatt');
+const { areEqual, typeOf } = require('../dist');
 
 test('if the passed arguments are equal', () => {
     expect(areEqual(3, 3)).toEqual(true);

@@ -1,4 +1,4 @@
-const { isFloat } = require('../werkstatt');
+const { isFloat } = require('../dist');
 
 test('if the passed argument is float or not', () => {
     expect(isFloat(3)).toEqual(false);

@@ -3,4 +3,4 @@ function subtract(...values) {
   return a - b;
 }
 
-module.exports = { subtract };
+export default subtract;

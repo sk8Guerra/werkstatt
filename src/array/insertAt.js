@@ -4,4 +4,4 @@ function insertAt(array, index, elementToInsert) {
   return newArray;
 };
 
-module.exports = { insertAt };
+export default insertAt

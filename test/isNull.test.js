@@ -1,4 +1,4 @@
-const { isNull } = require('../werkstatt');
+const { isNull } = require('../dist');
 
 test('if the passed arguments is null', () => {
     expect(isNull(null)).toEqual(true);

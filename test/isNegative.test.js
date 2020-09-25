@@ -1,4 +1,4 @@
-const { isNegative } = require('../werkstatt');
+const { isNegative } = require('../dist');
 
 test('if the passed argument is not a negative number', () => {
     expect(isNegative(3)).toEqual(false);

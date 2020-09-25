@@ -1,4 +1,4 @@
-const { isUndefined } = require('../werkstatt');
+const { isUndefined } = require('../dist');
 
 test('if the passed argument is undefined', () => {
     expect(isUndefined(3)).toEqual(false);

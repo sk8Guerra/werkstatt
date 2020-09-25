@@ -1,5 +1,5 @@
-const { areEqual } = require('../other/areEqual');
-const { typeOf } = require('../other/typeOf');
+import areEqual from '../other/areEqual';
+import typeOf from '../other/typeOf';
 
 function isLengthOf(value, len) {
   if (areEqual(typeOf(value), 'undefined') || areEqual(typeOf(value), 'null')) return false;
@@ -9,4 +9,4 @@ function isLengthOf(value, len) {
   return value.length === len;
 }
 
-module.exports = { isLengthOf };
+export default isLengthOf;

@@ -1,7 +1,7 @@
-const { isOdd } = require('./isOdd');
+import isOdd from './isOdd';
 
 function isEven(value) {
   return !isOdd(value);
 };
 
-module.exports = { isEven }
+export default isEven;

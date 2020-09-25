@@ -1,4 +1,4 @@
-const { add } = require('../werkstatt');
+const { add } = require('../dist');
 
 test('add all the numbers passed as arguments', () => {
     expect(add(3, 6, 11)).toBe(20);

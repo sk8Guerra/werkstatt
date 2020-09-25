@@ -3,4 +3,4 @@ function isGreaterThan(...values) {
   return firstValue > secondValue
 }
 
-module.exports = { isGreaterThan };
+export default isGreaterThan;

@@ -1,4 +1,4 @@
-const { isArrayOfNumbers } = require('../werkstatt');
+const { isArrayOfNumbers } = require('../dist');
 
 test('if the passed array is an array of numbers', () => {
     expect(isArrayOfNumbers([3, 6, 11, 'hola'])).toBe(false);

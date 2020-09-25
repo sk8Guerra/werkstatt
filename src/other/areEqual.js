@@ -3,4 +3,4 @@ function areEqual(...values) {
   return firstValue === secondValue;
 }
 
-module.exports = { areEqual };
+export default areEqual;

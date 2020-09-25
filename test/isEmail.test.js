@@ -1,4 +1,4 @@
-const { isEmail } = require('../werkstatt');
+const { isEmail } = require('../dist');
 
 test('if the passed argument is undefined', () => {
     expect(isEmail(3)).toEqual(false);

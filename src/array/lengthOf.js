@@ -5,4 +5,4 @@ function lengthOf(value) {
   return value.length;
 }
 
-module.exports = { lengthOf };
+export default lengthOf;

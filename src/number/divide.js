@@ -3,4 +3,4 @@ function divide(...values) {
   return dividend / divider;
 }
 
-module.exports = { divide };
+export default divide;

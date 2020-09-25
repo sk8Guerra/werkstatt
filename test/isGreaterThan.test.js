@@ -1,4 +1,4 @@
-const { isGreaterThan } = require('../werkstatt');
+const { isGreaterThan } = require('../dist');
 
 test('if the first passed argument greater than the second.', () => {
     expect(isGreaterThan(3, 5)).toEqual(false);

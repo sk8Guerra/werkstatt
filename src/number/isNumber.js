@@ -8,4 +8,4 @@ function isNumber (value) {
   return false;
 };
 
-module.exports = { isNumber };
+export default isNumber;

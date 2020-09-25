@@ -1,4 +1,4 @@
-const { isFloat } = require('../float/isFloat');
+import isFloat from '../float/isFloat';
 
 function typeOf(value) {
   if (String(value) === 'null' && typeof(value) === 'object') return 'null';
@@ -16,4 +16,4 @@ function typeOf(value) {
   return typeof(value);
 }
 
-module.exports = { typeOf };
+export default typeOf;
