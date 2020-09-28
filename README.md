@@ -25,35 +25,8 @@ yarn add werkstatt
 
 ## ✨ Features
 
-* [roundUp](#roundUp)
-* [roundDown](#roundDown)
-* [isEmpty](#isEmpty)
-* [insertAt](#insertAt)
-* [isNumber](#isNumber)
-* [isNegative](#isNegative)
-* [isOdd](#isOdd)
-* [isEven](#isEven)
-* [isZero](#isZero)
-* [isEmail](#isEmail)
-* [isUndefined](#isUndefined)
-* [orderAsc](#orderAsc)
-* [lengthOf](#lengthOf)
-* [isLengthOf](#isLengthOf)
-* [subtract](#subtract)
-* [isFloat](#isFloat)
-* [typeOf](#typeOf)
-* [capitalizeFirstLetter](#capitalizeFirstLetter)
-* [add](#add)
-* [isArrayOfNumbers](#isArrayOfNumbers)
-* [divide](#divide)
-* [areEqual](#areEqual)
-* [isDefined](#isDefined)
-* [isGreaterThan](#isGreaterThan)
-* [has](#has)
-* [isNull](#isNull)
-* more coming soon ✨
-
-### roundUp
+<details>
+<summary><strong>roundUp</strong></summary>
 
 ##### Arguments
 
@@ -66,8 +39,10 @@ const { roundUp } = require('werkstatt');
 
 roundUp(3.2) // -> 4
 ```
+</details>
 
-### roundDown
+<details>
+<summary><strong>roundDown</strong></summary>
 
 ##### Arguments
 
@@ -80,8 +55,10 @@ const { roundDown } = require('werkstatt');
 
 roundDown(3.8) // -> 3
 ```
+</details>
 
-### isEmpty
+<details>
+<summary><strong>isEmpty</strong></summary>
 
 ##### Arguments
 
@@ -100,8 +77,10 @@ isEmpty(3); // -> true
 isEmpty(true); // -> true
 ```
 > Note: `isEmpty` currently supports array, object and string only.
+</details>
 
-### insertAt
+<details>
+<summary><strong>insertAt</strong></summary>
 
 ##### Arguments
 
@@ -116,8 +95,10 @@ const { insertAt } = require('werkstatt');
 
 insertAt([1, 2, 3], 1, 4); // -> [1, 4, 2, 3]
 ```
+</details>
 
-### isNumber
+<details>
+<summary><strong>isNumber</strong></summary>
 
 ##### Arguments
 
@@ -137,8 +118,10 @@ isNumber(true); // -> false
 ```
 
 > NOTE: this is an implementation of [is-number](https://www.npmjs.com/package/is-number) package.
+</details>
 
-### isNegative
+<details>
+<summary><strong>isNegative</strong></summary>
 
 ##### Arguments
 
@@ -152,8 +135,10 @@ const { isNegative } = require('werkstatt');
 isNegative(-54); // -> true
 isNegative(4); // -> false
 ```
+</details>
 
-### isOdd
+<details>
+<summary><strong>isOdd</strong></summary>
 
 ##### Arguments
 
@@ -169,8 +154,10 @@ isOdd(4); // -> false
 ```
 
 > NOTE: this is an implementation of [is-odd](https://www.npmjs.com/package/is-odd) package.
+</details>
 
-### isEven
+<details>
+<summary><strong>isEven</strong></summary>
 
 ##### Arguments
 
@@ -186,8 +173,10 @@ isEven(4); // -> true
 ```
 
 > NOTE: this is an implementation of [is-even](https://www.npmjs.com/package/is-even) package.
+</details>
 
-### isZero
+<details>
+<summary><strong>isZero</strong></summary>
 
 ##### Arguments
 
@@ -201,8 +190,10 @@ const { isZero } = require('werkstatt');
 isZero(7); // -> false
 isZero(0); // -> true
 ```
+</details>
 
-### isEmail
+<details>
+<summary><strong>isEmail</strong></summary>
 
 ##### Arguments
 
@@ -217,8 +208,10 @@ isEmail("a@a.c"); // -> false
 isEmail("a@a.co"); // -> true
 ```
 > Best regex [found out there](https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript).
+</details>
 
-### isUndefined
+<details>
+<summary><strong>isUndefined</strong></summary>
 
 ##### Arguments
 
@@ -232,8 +225,10 @@ const { isUndefined } = require('werkstatt');
 isUndefined(); // -> true
 isUndefined("a@a.co"); // -> false
 ```
+</details>
 
-### orderAsc
+<details>
+<summary><strong>orderAsc</strong></summary>
 
 ##### Arguments
 
@@ -248,8 +243,10 @@ orderAsc([8, 10, 6]); // -> [6, 8, 10]
 ```
 
 > NOTE: this is an implementation of [quicksort algorithm](https://en.wikipedia.org/wiki/Quicksort)
+</details>
 
-### lengthOf
+<details>
+<summary><strong>lengthOf</strong></summary>
 
 ##### Arguments
 
@@ -262,8 +259,10 @@ const { lengthOf } = require('werkstatt');
 
 lengthOf([8, 10, 6]); // -> 3
 ```
+</details>
 
-### isLengthOf
+<details>
+<summary><strong>isLengthOf</strong></summary>
 
 ##### Arguments
 
@@ -278,8 +277,10 @@ isLengthOf([8, 10, 6], 3); // -> true
 isLengthOf("hola", 0); // -> false
 isLengthOf({name: "Jorge", lasName: "Guerra"}, 2) // -> true
 ```
+</details>
 
-### subtract
+<details>
+<summary><strong>subtract</strong></summary>
 
 ##### Arguments
 
@@ -294,8 +295,10 @@ subtract(6, 3); // -> 3
 ```
 
 > NOTE: currently it only supports two numbers as paremeters.
+</details>
 
-### isFloat
+<details>
+<summary><strong>isFloat</strong></summary>
 
 ##### Arguments
 
@@ -309,8 +312,10 @@ const { isFloat } = require('werkstatt');
 isFloat(6); // -> false
 isFloat(6.5); // -> true
 ```
+</details>
 
-### typeOf
+<details>
+<summary><strong>typeOf</strong></summary>
 
 ##### Arguments
 
@@ -331,8 +336,10 @@ typeOf(true); // -> 'boolean'
 typeOf(() => {}); // -> 'function'
 typeOf(6); // -> number
 ```
+</details>
 
-### capitalizeFirstLetter
+<details>
+<summary><strong>capitalizeFirstLetter</strong></summary>
 
 ##### Arguments
 
@@ -348,8 +355,10 @@ capitalizeFirstLetter('adios'); // -> 'Adios'
 ```
 
 > NOTE: this is an implementation of a [Flavio's function](https://flaviocopes.com/how-to-uppercase-first-letter-javascript/)
+</details>
 
-### add
+<details>
+<summary><strong>add</strong></summary>
 
 ##### Arguments
 
@@ -364,8 +373,10 @@ add(3, 6, 11); // -> 20
 const numbers = [1, 2, 3];
 add(...numbers); // -> 6
 ```
+</details>
 
-### isArrayOfNumbers
+<details>
+<summary><strong>isArrayOfNumbers</strong></summary>
 
 ##### Arguments
 
@@ -379,8 +390,10 @@ const { isArrayOfNumbers } = require('werkstatt');
 isArrayOfNumbers([3, 6, 11, 'hola']); // -> false
 isArrayOfNumbers([1, 2, 3]); // -> true
 ```
+</details>
 
-### divide
+<details>
+<summary><strong>divide</strong></summary>
 
 ##### Arguments
 
@@ -395,8 +408,10 @@ const { divide } = require('werkstatt');
 divide(100, 2); // -> 50
 divide(10, 5); // -> 2
 ```
+</details>
 
-### areEqual
+<details>
+<summary><strong>areEqual</strong></summary>
 
 ##### Arguments
 
@@ -414,8 +429,10 @@ areEqual(typeOf(name), 'undefined'); // -> true
 ```
 
 > NOTE: This function supports primitive values only because objects are not compared by value but by reference. 
+</details>
 
-### isDefined
+<details>
+<summary><strong>isDefined</strong></summary>
 
 ##### Arguments
 
@@ -434,8 +451,10 @@ var age = null;
 isDefined(age); // -> false
 isDefined({}); // -> true
 ```
+</details>
 
-### isGreaterThan
+<details>
+<summary><strong>isGreaterThan</strong></summary>
 
 ##### Arguments
 
@@ -450,8 +469,10 @@ const { isGreaterThan } = require('werkstatt');
 isGreaterThan(100, 50); // -> true
 isGreaterThan(1, 50); // -> false
 ```
+</details>
 
-### has
+<details>
+<summary><strong>has</strong></summary>
 
 ##### Arguments
 
@@ -466,8 +487,10 @@ const { has } = require('werkstatt');
 has([3, 5], 3); // -> true
 has(["Hola", "adios"], "true"); // -> false
 ```
+</details>
 
-### isNull
+<details>
+<summary><strong>isNull</strong></summary>
 
 ##### Arguments
 
@@ -482,3 +505,35 @@ var name = null;
 isNull(name); // -> true
 isNull("Hola"); // -> false
 ```
+</details>
+
+<details>
+<summary><strong>isTruthy</strong></summary>
+
+> Whenever JavaScript expects a boolean value (e.g. for the condition of an `if` statement), any value can be used. It will be interpreted as either `true` or `false`. The following values are interpreted as `false`:
+> * undefined, null
+> * **Boolean**: false
+> * **Number**: -0, NaN
+> * **String**: ''
+>
+> Speaking JavaScript by Alex Rauschmayer
+
+That means that those values *tend to* to be false. So if you pass as parameter to `isTruthy` function any of those values, it will return `false`. All other values are considered `true`.
+
+```javascript
+const { isTruthy } = require('werkstatt');
+
+isTruthy(3)); // -> ture
+isTruthy({}); // -> ture
+
+isTruthy(undefined); // -> false
+isTruthy(null); // -> false
+isTruthy(false); // -> false
+isTruthy(Number('hola')); // -> false
+isTruthy(0); // -> false
+isTruthy(-0); // -> false
+isTruthy(''); // -> false
+```
+</details>
+
+more coming soon ✨
