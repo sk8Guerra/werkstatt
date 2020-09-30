@@ -424,8 +424,15 @@ divide(10, 5); // -> 2
 const { areEqual } = require('werkstatt');
 
 areEqual(100, 2); // -> false
+
 var name;
 areEqual(typeOf(name), 'undefined'); // -> true
+
+const numbers = [4, 3, 5, 7, 3, 9];
+areEqual(...numbers); // -> false
+
+const ages = [9, 9, 9, 9, 9];
+areEqual(...ages); // -> true
 ```
 
 > NOTE: This function supports primitive values only because objects are not compared by value but by reference. 
