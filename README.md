@@ -523,8 +523,8 @@ That means that those values *tend to* to be false. So if you pass as parameter 
 ```javascript
 const { isTruthy } = require('werkstatt');
 
-isTruthy(3)); // -> ture
-isTruthy({}); // -> ture
+isTruthy(3)); // -> true
+isTruthy({}); // -> true
 
 isTruthy(undefined); // -> false
 isTruthy(null); // -> false
@@ -533,6 +533,20 @@ isTruthy(Number('hola')); // -> false
 isTruthy(0); // -> false
 isTruthy(-0); // -> false
 isTruthy(''); // -> false
+```
+</details>
+
+<details>
+<summary><strong>isFalsy</strong></summary>
+
+Exactly the opposite of `isTruthy`.
+
+```javascript
+const { isFalsy } = require('werkstatt');
+
+isFalsy(3)); // -> false
+isFalsy(null); // -> true
+
 ```
 </details>
 

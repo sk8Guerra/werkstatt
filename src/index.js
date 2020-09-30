@@ -31,6 +31,7 @@ import has from './other/has';
 import isNull from './other/isNull';
 
 import isTruthy from './boolean/isTruthy';
+import isFalsy from './boolean/isFalsy';
 
 export {
   roundUp,
@@ -59,5 +60,6 @@ export {
   isGreaterThan,
   has,
   isNull,
-  isTruthy
+  isTruthy,
+  isFalsy
 };
