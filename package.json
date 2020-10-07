@@ -3,6 +3,7 @@
   "version": "0.0.0-development",
   "description": "Useful functions to encapsulate common scenarios",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "commit": "git-cz",
     "test": "jest",
@@ -11,7 +12,8 @@
     "build": "npm-run-all --parallel build:*",
     "build:main": "babel --out-dir dist src",
     "build:umd": "webpack --output-filename index.umd.js",
-    "build:umd.min": "webpack --output-filename index.umd.min.js -p"
+    "build:umd.min": "webpack --output-filename index.umd.min.js -p",
+    "build:types": "tsc"
   },
   "files": [
     "dist",
@@ -59,6 +61,7 @@
     "rimraf": "^3.0.2",
     "run": "^1.4.0",
     "semantic-release": "^17.1.2",
+    "typescript": "^4.0.3",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
   },
