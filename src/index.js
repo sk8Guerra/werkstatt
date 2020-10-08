@@ -1,18 +1,11 @@
-import orderAsc from './array/orderAsc';
-import lengthOf from './array/lengthOf';
-
-import isLengthOf from './array/isLengthOf';
-import insertAt from './array/insertAt';
-import isArrayOfNumbers from './array/isArrayOfNumbers';
-
-import subtract from './number/subtract';
 import isZero from './number/isZero'
-import isOdd from './number/isOdd';
+import add from './number/add';
+import subtract from './number/subtract';
+import divide from './number/divide';
 import isNumber from './number/isNumber';
+import isOdd from './number/isOdd';
 import isEven from './number/isEven';
 import isNegative from './number/isNegative';
-import add from './number/add';
-import divide from './number/divide';
 import isGreaterThan from './number/isGreaterThan';
 
 import roundUp from  './float/roundUp';
@@ -22,44 +15,50 @@ import isFloat from './float/isFloat';
 import capitalizeFirstLetter from './string/capitalizeFirstLetter';
 import isEmail from './string/isEmail';
 
-import typeOf from './other/typeOf';
-import areEqual from './other/areEqual';
-import isUndefined from './other/isUndefined';
-import isEmpty from './other/isEmpty';
-import isDefined from './other/isDefined';
-import has from './other/has';
-import isNull from './other/isNull';
-
 import isTruthy from './boolean/isTruthy';
 import isFalsy from './boolean/isFalsy';
 
+import orderAsc from './array/orderAsc';
+import lengthOf from './array/lengthOf';
+import isLengthOf from './array/isLengthOf';
+import insertAt from './array/insertAt';
+import isArrayOfNumbers from './array/isArrayOfNumbers';
+
+import typeOf from './other/typeOf';
+import areEqual from './other/areEqual';
+import isUndefined from './other/isUndefined';
+import isDefined from './other/isDefined';
+import isEmpty from './other/isEmpty';
+import has from './other/has';
+import isNull from './other/isNull';
+
 export {
-  roundUp,
-  roundDown,
-  isEmpty,
-  insertAt,
+  isZero,
+  add,
+  subtract,
+  divide,
   isNumber,
-  isNegative,
   isOdd,
   isEven,
-  isZero,
-  isUndefined,
+  isNegative,
+  isGreaterThan,
+  roundUp,
+  roundDown,
+  isFloat,
+  capitalizeFirstLetter,
   isEmail,
+  isTruthy,
+  isFalsy,
   orderAsc,
   lengthOf,
   isLengthOf,
-  subtract,
-  isFloat,
-  typeOf,
-  capitalizeFirstLetter,
-  add,
+  insertAt,
   isArrayOfNumbers,
-  divide,
+  typeOf,
   areEqual,
+  isUndefined,
   isDefined,
-  isGreaterThan,
+  isEmpty,
   has,
   isNull,
-  isTruthy,
-  isFalsy
 };

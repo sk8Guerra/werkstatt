@@ -25,75 +25,76 @@ yarn add werkstatt
 
 ## ✨ Features
 
+### Number
+
 <details>
-<summary><strong>roundUp</strong></summary>
+<summary><strong>isZero</strong></summary>
 
 ##### Arguments
 
-| argument | type | 
-|-----------|------|
-| number    | float|
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | number  | will be tested if it is 0 or not | boolean |
 
 ```javascript
-const { roundUp } = require('werkstatt');
+const { isZero } = require('werkstatt');
 
-roundUp(3.2) // -> 4
+isZero(7); // -> false
+isZero(0); // -> true
 ```
 </details>
 
 <details>
-<summary><strong>roundDown</strong></summary>
+<summary><strong>add</strong></summary>
 
 ##### Arguments
 
-| argument | type  |
-|-----------|-------|
-| number    | float |
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| values     | number  | either an array of numbers or n args | number |
 
 ```javascript
-const { roundDown } = require('werkstatt');
+const { add } = require('werkstatt');
 
-roundDown(3.8) // -> 3
+add(3, 6, 11); // -> 20
+const numbers = [1, 2, 3];
+add(...numbers); // -> 6
 ```
 </details>
 
 <details>
-<summary><strong>isEmpty</strong></summary>
+<summary><strong>subtract</strong></summary>
 
 ##### Arguments
 
-| argument | type |
-|-----------|------|
-| param     | any  |
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| values     | number  | numbers that will be subtrtacted | number |
 
 ```javascript
-const { isEmpty } = require('werkstatt');
+const { subtract } = require('werkstatt');
 
-isEmpty({}); // -> true
-isEmpty({"hola": "adios"}); // -> false
-isEmpty([]); // -> true
-isEmpty(""); // -> true
-isEmpty(3); // -> true
-isEmpty(true); // -> true
+subtract(6, 3); // -> 3
 ```
-> Note: `isEmpty` currently supports array, object and string only.
+
+> NOTE: currently it only supports two numbers as paremeters.
 </details>
 
 <details>
-<summary><strong>insertAt</strong></summary>
+<summary><strong>divide</strong></summary>
 
 ##### Arguments
 
-| argument | type | description |
-|-----------|------|------------|
-| array     | any  | where the element will be inserted.
-| index     | any  | at which the element will be inserted.
-| elementToInsert | any  | element to insert in the array.
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| dividend     | number  | the dividend of the operation | number |
+| divider     | number  | the divider of the operation | number |
 
 ```javascript
-const { insertAt } = require('werkstatt');
+const { divide } = require('werkstatt');
 
-insertAt([1, 2, 3], 1, 4); // -> [1, 4, 2, 3]
+divide(100, 2); // -> 50
+divide(10, 5); // -> 2
 ```
 </details>
 
@@ -118,23 +119,6 @@ isNumber(true); // -> false
 ```
 
 > NOTE: this is an implementation of [is-number](https://www.npmjs.com/package/is-number) package.
-</details>
-
-<details>
-<summary><strong>isNegative</strong></summary>
-
-##### Arguments
-
-| argument | type | description |  returns   |
-|-----------|------|------------|------------|
-| value     | number  | will be tested if it is negative number or not | boolean |
-
-```javascript
-const { isNegative } = require('werkstatt');
-
-isNegative(-54); // -> true
-isNegative(4); // -> false
-```
 </details>
 
 <details>
@@ -176,21 +160,113 @@ isEven(4); // -> true
 </details>
 
 <details>
-<summary><strong>isZero</strong></summary>
+<summary><strong>isNegative</strong></summary>
 
 ##### Arguments
 
 | argument | type | description |  returns   |
 |-----------|------|------------|------------|
-| value     | number  | will be tested if it is 0 or not | boolean |
+| value     | number  | will be tested if it is negative number or not | boolean |
 
 ```javascript
-const { isZero } = require('werkstatt');
+const { isNegative } = require('werkstatt');
 
-isZero(7); // -> false
-isZero(0); // -> true
+isNegative(-54); // -> true
+isNegative(4); // -> false
 ```
 </details>
+
+<details>
+<summary><strong>isGreaterThan</strong></summary>
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| firstArgument     | number  | first value to be evaluated | boolean |
+| secondArgument     | number  | second value to be evaluated | boolean |
+
+```javascript
+const { isGreaterThan } = require('werkstatt');
+
+isGreaterThan(100, 50); // -> true
+isGreaterThan(1, 50); // -> false
+```
+</details>
+
+
+### Float
+
+<details>
+<summary><strong>roundUp</strong></summary>
+
+##### Arguments
+
+| argument | type | 
+|-----------|------|
+| number    | float|
+
+```javascript
+const { roundUp } = require('werkstatt');
+
+roundUp(3.2) // -> 4
+```
+</details>
+
+<details>
+<summary><strong>roundDown</strong></summary>
+
+##### Arguments
+
+| argument | type  |
+|-----------|-------|
+| number    | float |
+
+```javascript
+const { roundDown } = require('werkstatt');
+
+roundDown(3.8) // -> 3
+```
+</details>
+
+<details>
+<summary><strong>isFloat</strong></summary>
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | number, float  | will be tested if is or not float | boolean |
+
+```javascript
+const { isFloat } = require('werkstatt');
+
+isFloat(6); // -> false
+isFloat(6.5); // -> true
+```
+</details>
+
+### String
+
+<details>
+<summary><strong>capitalizeFirstLetter</strong></summary>
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | string  | string to capitalize first letter | string |
+
+```javascript
+const { capitalizeFirstLetter } = require('werkstatt');
+
+capitalizeFirstLetter('hola'); // -> 'Hola'
+capitalizeFirstLetter('adios'); // -> 'Adios'
+```
+
+> NOTE: this is an implementation of a [Flavio's function](https://flaviocopes.com/how-to-uppercase-first-letter-javascript/)
+</details>
+
 
 <details>
 <summary><strong>isEmail</strong></summary>
@@ -210,22 +286,52 @@ isEmail("a@a.co"); // -> true
 > Best regex [found out there](https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript).
 </details>
 
+### Boolean
+
 <details>
-<summary><strong>isUndefined</strong></summary>
+<summary><strong>isTruthy</strong></summary>
 
-##### Arguments
+> Whenever JavaScript expects a boolean value (e.g. for the condition of an `if` statement), any value can be used. It will be interpreted as either `true` or `false`. The following values are interpreted as `false`:
+> * undefined, null
+> * **Boolean**: false
+> * **Number**: -0, NaN
+> * **String**: ''
+>
+> Speaking JavaScript by Alex Rauschmayer
 
-| argument | type | description |  returns   |
-|-----------|------|------------|------------|
-| value     | any  | will be tested if is undefined or not | boolean |
+That means that those values *tend to* to be false. So if you pass as parameter to `isTruthy` function any of those values, it will return `false`. All other values are considered `true`.
 
 ```javascript
-const { isUndefined } = require('werkstatt');
+const { isTruthy } = require('werkstatt');
 
-isUndefined(); // -> true
-isUndefined("a@a.co"); // -> false
+isTruthy(3)); // -> true
+isTruthy({}); // -> true
+
+isTruthy(undefined); // -> false
+isTruthy(null); // -> false
+isTruthy(false); // -> false
+isTruthy(Number('hola')); // -> false
+isTruthy(0); // -> false
+isTruthy(-0); // -> false
+isTruthy(''); // -> false
 ```
 </details>
+
+<details>
+<summary><strong>isFalsy</strong></summary>
+
+Exactly the opposite of `isTruthy`.
+
+```javascript
+const { isFalsy } = require('werkstatt');
+
+isFalsy(3)); // -> false
+isFalsy(null); // -> true
+
+```
+</details>
+
+### Array
 
 <details>
 <summary><strong>orderAsc</strong></summary>
@@ -280,39 +386,41 @@ isLengthOf({name: "Jorge", lasName: "Guerra"}, 2) // -> true
 </details>
 
 <details>
-<summary><strong>subtract</strong></summary>
+<summary><strong>insertAt</strong></summary>
 
 ##### Arguments
 
-| argument | type | description |  returns   |
-|-----------|------|------------|------------|
-| values     | number  | numbers that will be subtrtacted | number |
+| argument | type | description |
+|-----------|------|------------|
+| array     | any  | where the element will be inserted.
+| index     | any  | at which the element will be inserted.
+| elementToInsert | any  | element to insert in the array.
 
 ```javascript
-const { subtract } = require('werkstatt');
+const { insertAt } = require('werkstatt');
 
-subtract(6, 3); // -> 3
+insertAt([1, 2, 3], 1, 4); // -> [1, 4, 2, 3]
 ```
-
-> NOTE: currently it only supports two numbers as paremeters.
 </details>
 
 <details>
-<summary><strong>isFloat</strong></summary>
+<summary><strong>isArrayOfNumbers</strong></summary>
 
 ##### Arguments
 
 | argument | type | description |  returns   |
 |-----------|------|------------|------------|
-| value     | number, float  | will be tested if is or not float | boolean |
+| values     | number  | array to test | boolean |
 
 ```javascript
-const { isFloat } = require('werkstatt');
+const { isArrayOfNumbers } = require('werkstatt');
 
-isFloat(6); // -> false
-isFloat(6.5); // -> true
+isArrayOfNumbers([3, 6, 11, 'hola']); // -> false
+isArrayOfNumbers([1, 2, 3]); // -> true
 ```
 </details>
+
+### Other
 
 <details>
 <summary><strong>typeOf</strong></summary>
@@ -335,78 +443,6 @@ typeOf('undefined'); // -> 'string'
 typeOf(true); // -> 'boolean'
 typeOf(() => {}); // -> 'function'
 typeOf(6); // -> number
-```
-</details>
-
-<details>
-<summary><strong>capitalizeFirstLetter</strong></summary>
-
-##### Arguments
-
-| argument | type | description |  returns   |
-|-----------|------|------------|------------|
-| value     | string  | string to capitalize first letter | string |
-
-```javascript
-const { capitalizeFirstLetter } = require('werkstatt');
-
-capitalizeFirstLetter('hola'); // -> 'Hola'
-capitalizeFirstLetter('adios'); // -> 'Adios'
-```
-
-> NOTE: this is an implementation of a [Flavio's function](https://flaviocopes.com/how-to-uppercase-first-letter-javascript/)
-</details>
-
-<details>
-<summary><strong>add</strong></summary>
-
-##### Arguments
-
-| argument | type | description |  returns   |
-|-----------|------|------------|------------|
-| values     | number  | either an array of numbers or n args | number |
-
-```javascript
-const { add } = require('werkstatt');
-
-add(3, 6, 11); // -> 20
-const numbers = [1, 2, 3];
-add(...numbers); // -> 6
-```
-</details>
-
-<details>
-<summary><strong>isArrayOfNumbers</strong></summary>
-
-##### Arguments
-
-| argument | type | description |  returns   |
-|-----------|------|------------|------------|
-| values     | number  | array to test | boolean |
-
-```javascript
-const { isArrayOfNumbers } = require('werkstatt');
-
-isArrayOfNumbers([3, 6, 11, 'hola']); // -> false
-isArrayOfNumbers([1, 2, 3]); // -> true
-```
-</details>
-
-<details>
-<summary><strong>divide</strong></summary>
-
-##### Arguments
-
-| argument | type | description |  returns   |
-|-----------|------|------------|------------|
-| dividend     | number  | the dividend of the operation | number |
-| divider     | number  | the divider of the operation | number |
-
-```javascript
-const { divide } = require('werkstatt');
-
-divide(100, 2); // -> 50
-divide(10, 5); // -> 2
 ```
 </details>
 
@@ -439,6 +475,23 @@ areEqual(...ages); // -> true
 </details>
 
 <details>
+<summary><strong>isUndefined</strong></summary>
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | any  | will be tested if is undefined or not | boolean |
+
+```javascript
+const { isUndefined } = require('werkstatt');
+
+isUndefined(); // -> true
+isUndefined("a@a.co"); // -> false
+```
+</details>
+
+<details>
 <summary><strong>isDefined</strong></summary>
 
 ##### Arguments
@@ -461,22 +514,52 @@ isDefined({}); // -> true
 </details>
 
 <details>
-<summary><strong>isGreaterThan</strong></summary>
+<summary><strong>isEmpty</strong></summary>
 
 ##### Arguments
 
-| argument | type | description |  returns   |
-|-----------|------|------------|------------|
-| firstArgument     | number  | first value to be evaluated | boolean |
-| secondArgument     | number  | second value to be evaluated | boolean |
+| argument | type |
+|-----------|------|
+| param     | any  |
 
 ```javascript
-const { isGreaterThan } = require('werkstatt');
+const { isEmpty } = require('werkstatt');
 
-isGreaterThan(100, 50); // -> true
-isGreaterThan(1, 50); // -> false
+isEmpty({}); // -> true
+isEmpty({"hola": "adios"}); // -> false
+isEmpty([]); // -> true
+isEmpty(""); // -> true
+isEmpty(3); // -> true
+isEmpty(true); // -> true
 ```
+> Note: `isEmpty` currently supports array, object and string only.
 </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <details>
 <summary><strong>has</strong></summary>
@@ -514,47 +597,6 @@ isNull("Hola"); // -> false
 ```
 </details>
 
-<details>
-<summary><strong>isTruthy</strong></summary>
-
-> Whenever JavaScript expects a boolean value (e.g. for the condition of an `if` statement), any value can be used. It will be interpreted as either `true` or `false`. The following values are interpreted as `false`:
-> * undefined, null
-> * **Boolean**: false
-> * **Number**: -0, NaN
-> * **String**: ''
->
-> Speaking JavaScript by Alex Rauschmayer
-
-That means that those values *tend to* to be false. So if you pass as parameter to `isTruthy` function any of those values, it will return `false`. All other values are considered `true`.
-
-```javascript
-const { isTruthy } = require('werkstatt');
-
-isTruthy(3)); // -> true
-isTruthy({}); // -> true
-
-isTruthy(undefined); // -> false
-isTruthy(null); // -> false
-isTruthy(false); // -> false
-isTruthy(Number('hola')); // -> false
-isTruthy(0); // -> false
-isTruthy(-0); // -> false
-isTruthy(''); // -> false
-```
-</details>
-
-<details>
-<summary><strong>isFalsy</strong></summary>
-
-Exactly the opposite of `isTruthy`.
-
-```javascript
-const { isFalsy } = require('werkstatt');
-
-isFalsy(3)); // -> false
-isFalsy(null); // -> true
-
-```
-</details>
+<br />
 
 more coming soon ✨
