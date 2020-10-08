@@ -535,32 +535,6 @@ isEmpty(true); // -> true
 > Note: `isEmpty` currently supports array, object and string only.
 </details>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <details>
 <summary><strong>has</strong></summary>
 
@@ -600,3 +574,20 @@ isNull("Hola"); // -> false
 <br />
 
 more coming soon ✨
+
+## 🙌🏽 Contribute
+
+1. Fork and clone the repo
+2. Run `npm install` to install dependencies
+3. Create a branch for your PR with `git checkout -b your-branch-name``
+
+> To keep `master` branch pointing to remote repository and make
+> pull requests from branches on your fork. To do this, run:
+>
+> ```sh
+> git remote add upstream https://github.com/sk8guerra/werkstatt.git
+> git fetch upstream
+> git branch --set-upstream-to=upstream/master master
+> ```
+
+4. Make your pull request 🥳
