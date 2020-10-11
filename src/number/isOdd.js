@@ -1,7 +1,14 @@
 import isNumber from './isNumber';
 
-function isOdd(value) {
-  const n = Math.abs(value);
+/**
+ * Check whether the passed number is an odd number or not.
+ *
+ * @param {number} number The number to check.
+ * @returns {boolean} true: if the number is an odd number. false: if the number is not an odd number.
+ */
+
+function isOdd(number) {
+  const n = Math.abs(number);
   if (!isNumber(n)) {
     throw new TypeError('expected a number');
   }
@@ -9,7 +16,7 @@ function isOdd(value) {
     throw new Error('expected an integer');
   }
   if (!Number.isSafeInteger(n)) {
-    throw new Error('value exceeds maximum safe integer');
+    throw new Error('number exceeds maximum safe integer');
   }
   return (n % 2) === 1;
 };
