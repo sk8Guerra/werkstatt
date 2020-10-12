@@ -1,12 +1,12 @@
 /**
- * Round up the argument to next closest integer.
+ * Round up the number to next closest integer.
  *
- * @param {number} value The value to round up.
- * @returns {number} The value rounded up.
+ * @param {number} number The number to round up.
+ * @returns {number} The number rounded up.
  */
 
-function roundUp(value) {
-  return Math.ceil(value);
+function roundUp(number) {
+  return Math.ceil(number);
 }
 
 export default roundUp;

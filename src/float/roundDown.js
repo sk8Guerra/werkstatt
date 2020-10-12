@@ -1,8 +1,8 @@
 /**
- * Round down the argument to the previous integer.
+ * Round down the number to the previous integer.
  *
- * @param {number} value The value to round down.
- * @returns {number} The value rounded down.
+ * @param {number} number The number to round down.
+ * @returns {number} The number rounded down.
  */
 
 function roundDown(number) {
