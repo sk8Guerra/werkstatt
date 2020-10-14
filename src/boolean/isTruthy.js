@@ -6,6 +6,12 @@ import isZero from '../number/isZero';
 import typeOf from '../other/typeOf';
 import isLengthOf from '../array/isLengthOf';
 
+/**
+ * Check whether the passed argument is truthy (tends to be true) or not.
+ * @param {any} value The value to check.
+ * @returns {boolean} true: if the passed argument is truthy. false: if the argument is not truthy.
+ */
+
 const isTruthy = value => {
   if (isUndefined(value) || isNull(value)) return false;
   if (areEqual(String(value), 'false')) return false;
