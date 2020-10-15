@@ -1,5 +1,12 @@
 import isFloat from '../float/isFloat';
 
+/**
+ * Determines the data type of the passed argument.
+ * 
+ * @param {any} value The value to check.
+ * @returns {string} Describes the data type.
+ */
+
 function typeOf(value) {
   if (String(value) === 'null' && typeof(value) === 'object') return 'null';
   if (typeof(value) === 'undefined') return 'undefined';

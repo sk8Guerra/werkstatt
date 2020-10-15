@@ -453,8 +453,7 @@ typeOf(6); // -> number
 
 | argument | type | description |  returns   |
 |-----------|------|------------|------------|
-| firstValue     | any  | first arg to compare | boolean |
-| secondValue     | any  | second arg to compare | boolean |
+| n amount     | any  | args to compare | boolean |
 
 ```javascript
 const { areEqual } = require('werkstatt');

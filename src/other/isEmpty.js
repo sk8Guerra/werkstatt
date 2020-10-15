@@ -1,9 +1,9 @@
 import isLengthOf from '../array/isLengthOf';
 
 /**
- * Check if the passed argument is empty.
+ * Check whether the passed value is empty or not.
  *
- * @param {any} param The param to check.
+ * @param {any} value The value to check.
  * @returns {boolean} true: if the value is empty. false: if the value is not empty. 
  */
 
