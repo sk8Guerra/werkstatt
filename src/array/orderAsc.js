@@ -40,6 +40,13 @@ function quickSort(items, left, right) {
   return items;
 };
 
+/**
+ * Order a list of numbers in ascendant mode.
+ *
+ * @param {number[]} array The list of numbers to order.
+ * @returns {number[]} The list of numbers ordered.
+ */
+
 function orderAsc(array) {
   return quickSort(array, 0, subtract(lengthOf(array), 1))
 }
