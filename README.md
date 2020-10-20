@@ -15,12 +15,24 @@ Clearly, `null` is  not an object. More of that 👉🏼[here](https://2ality.co
 
 ## 📦 Install
 
+**npm**
 ```bash
 npm install -s werkstatt
 ```
-or
+**yarn**
 ```bash
 yarn add werkstatt
+```
+**browser**
+
+```html
+<script src="https://unpkg.com/werkstatt@1.14.0/dist/index.umd.min.js"></script>
+
+<script>
+    console.log(werkstatt.isEmail('asdf')); // -> false
+    console.log(werkstatt.isNull(3)); // -> false
+    console.log(werkstatt.areEqual(6, 6, 6, 6)); // -> true
+</script>
 ```
 
 ## ✨ Features
