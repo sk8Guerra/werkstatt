@@ -561,6 +561,7 @@ const { has } = require('werkstatt');
 
 has([3, 5], 3); // -> true
 has(["Hola", "adios"], "true"); // -> false
+has("Jorge", "e"); // -> true
 ```
 </details>
 
