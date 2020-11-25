@@ -432,6 +432,27 @@ isArrayOfNumbers([1, 2, 3]); // -> true
 ```
 </details>
 
+<details>
+<summary><strong>toArray</strong></summary>
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| arrayLikeObject     | any  | object to convert | array |
+
+```javascript
+const { toArray } = require('werkstatt');
+
+function testToArray() {
+  console.log(arguments); // array like object -> [Arguments] { '0': 1, '1': 2, '2': 3 }
+  return toArray(arguments);
+}
+
+testToArray(1, 2, 3); // -> [ 1, 2, 3 ]
+```
+</details>
+
 ### Other
 
 <details>
@@ -580,6 +601,24 @@ const { isNull } = require('werkstatt');
 var name = null;
 isNull(name); // -> true
 isNull("Hola"); // -> false
+```
+</details>
+
+<details>
+<summary><strong>every</strong></summary>
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| args     | array  | arguments to match to a specific type | boolean |
+
+```javascript
+const { every } = require('werkstatt');
+
+every('adios' === 'adios', 'hola' === 'hola').is.true // -> true
+every('adios', 'hola').is.string // -> true
+every(1, 2).is.number // -> true
 ```
 </details>
 

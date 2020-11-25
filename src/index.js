@@ -23,6 +23,7 @@ import lengthOf from './array/lengthOf';
 import isLengthOf from './array/isLengthOf';
 import insertAt from './array/insertAt';
 import isArrayOfNumbers from './array/isArrayOfNumbers';
+import toArray from './array/toArray';
 
 import typeOf from './other/typeOf';
 import areEqual from './other/areEqual';
@@ -31,6 +32,7 @@ import isDefined from './other/isDefined';
 import isEmpty from './other/isEmpty';
 import has from './other/has';
 import isNull from './other/isNull';
+import every from './other/every';
 
 export {
   isZero,
@@ -61,4 +63,6 @@ export {
   isEmpty,
   has,
   isNull,
+  toArray,
+  every
 };

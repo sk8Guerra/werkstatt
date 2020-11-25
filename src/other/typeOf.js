@@ -1,4 +1,5 @@
 import isFloat from '../float/isFloat';
+import isNumber from '../number/isNumber';
 
 /**
  * Determines the data type of the passed argument.
@@ -14,10 +15,10 @@ function typeOf(value) {
   if (typeof(value) === 'boolean') return 'boolean';
   if (typeof(value) === 'function') return 'function';
   if (typeof(value) === 'symbol') return 'symbol';
-  if(typeof(value) === 'number') {
+  if (isNumber(value)) {
     if (isFloat(value)) return 'float'
     return 'number'
-  }
+  };
   if (value instanceof Array) return 'array';
   if (value instanceof Object) return 'object';
   return typeof(value);
