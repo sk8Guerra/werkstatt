@@ -1,8 +1,8 @@
 
 /**
- * Converts array like objects to array. e.g. 'arguments' arg in a function.
+ * Converts array like objects/NodeList to array. e.g. 'arguments' arg in a function.
  *
- * @param {Object} arrayLikeObject The array like object.
+ * @param {Object} arrayLikeObject The array like object/NodeList.
  * @returns {Array} An array where you can use all array's methods.
  */
 

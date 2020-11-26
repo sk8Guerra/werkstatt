@@ -439,7 +439,7 @@ isArrayOfNumbers([1, 2, 3]); // -> true
 
 | argument | type | description |  returns   |
 |-----------|------|------------|------------|
-| arrayLikeObject     | any  | object to convert | array |
+| arrayLikeObject/NodeList     | any  | object to convert | array |
 
 ```javascript
 const { toArray } = require('werkstatt');
