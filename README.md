@@ -4,6 +4,7 @@
 
 [![travis build](https://img.shields.io/travis/sk8guerra/werkstatt)](https://travis-ci.org/github/sk8Guerra/werkstatt)
 
+
 As described [here](https://github.com/ryanmcdermott/clean-code-javascript#encapsulate-conditionals), is good to encapsulate conditionals to make our code more readable, reusable and avoid ambiguities. Also to avoid potential bugs due to some javascript features are error-prone:
 
 ```javascript
@@ -12,6 +13,8 @@ typeof name; // "object"
 ```
 
 Clearly, `null` is  not an object. More of that 👉🏼[here](https://2ality.com/2013/10/typeof-null.html).
+
+> ⚠️ WARNING: This is also a proof of concept. Some of the functions' names may not make all the sense to you or also may be many breaking changes.
 
 ## 📦 Install
 
@@ -26,12 +29,14 @@ yarn add werkstatt
 **browser**
 
 ```html
-<script src="https://unpkg.com/werkstatt@1.14.0/dist/index.umd.min.js"></script>
+<script src="https://unpkg.com/werkstatt@1.16.0/dist/index.umd.min.js"></script>
 
 <script>
-    console.log(werkstatt.isEmail('asdf')); // -> false
-    console.log(werkstatt.isNull(3)); // -> false
-    console.log(werkstatt.areEqual(6, 6, 6, 6)); // -> true
+    const { isEmail, isNull, areEqual } = werkstatt;
+    
+    console.log(isEmail('asdf')); // -> false
+    console.log(isNull(3)); // -> false
+    console.log(areEqual(6, 6, 6, 6)); // -> true
 </script>
 ```
 
