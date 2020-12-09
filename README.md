@@ -14,6 +14,8 @@ typeof name; // "object"
 
 Clearly, `null` is  not an object. More of that 👉🏼[here](https://2ality.com/2013/10/typeof-null.html).
 
+This is then, a package that encapsulates conditionals, but also other util functions.
+
 > ⚠️ WARNING: This is also a proof of concept. Some of the functions' names may not make all the sense to you or also may be many breaking changes.
 
 ## 📦 Install
@@ -303,6 +305,23 @@ isEmail("a@a.co"); // -> true
 > Best regex [found out there](https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript).
 </details>
 
+<details>
+<summary><strong>isString</strong></summary>
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | any  | whether or not the value is a string | boolean |
+
+```javascript
+const { isString } = require('werkstatt');
+
+isString("Hola"); // -> true
+isString([3]); // -> false
+```
+</details>
+
 ### Boolean
 
 <details>
@@ -455,6 +474,23 @@ function testToArray() {
 }
 
 testToArray(1, 2, 3); // -> [ 1, 2, 3 ]
+```
+</details>
+
+<details>
+<summary><strong>isArray</strong></summary>
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| value     | any  | whether or not the value is an array | boolean |
+
+```javascript
+const { isArray } = require('werkstatt');
+
+isArray("Hola"); // -> false
+isArray([3]); // -> true
 ```
 </details>
 

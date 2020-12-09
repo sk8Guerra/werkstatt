@@ -14,6 +14,7 @@ import isFloat from './float/isFloat';
 
 import capitalizeFirstLetter from './string/capitalizeFirstLetter';
 import isEmail from './string/isEmail';
+import isString from './string/isString';
 
 import isTruthy from './boolean/isTruthy';
 import isFalsy from './boolean/isFalsy';
@@ -24,6 +25,7 @@ import isLengthOf from './array/isLengthOf';
 import insertAt from './array/insertAt';
 import isArrayOfNumbers from './array/isArrayOfNumbers';
 import toArray from './array/toArray';
+import isArray from './array/isArray';
 
 import typeOf from './other/typeOf';
 import areEqual from './other/areEqual';
@@ -44,18 +46,26 @@ export {
   isEven,
   isNegative,
   isGreaterThan,
+
   roundUp,
   roundDown,
   isFloat,
+
   capitalizeFirstLetter,
   isEmail,
+  isString,
+
   isTruthy,
   isFalsy,
+
   orderAsc,
   lengthOf,
   isLengthOf,
   insertAt,
   isArrayOfNumbers,
+  toArray,
+  isArray,
+  
   typeOf,
   areEqual,
   isUndefined,
@@ -63,6 +73,5 @@ export {
   isEmpty,
   has,
   isNull,
-  toArray,
   every
 };
