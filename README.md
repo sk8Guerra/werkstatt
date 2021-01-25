@@ -213,6 +213,91 @@ isGreaterThan(1, 50); // -> false
 ```
 </details>
 
+<details>
+<summary><strong>toFixed</strong></summary>
+
+##### Arguments
+
+| argument | type | description |
+|-----------|------|------------|
+| value     | number  | number to convert |
+| precision     | number  | desired amount of decimals |
+
+```javascript
+const { toFixed } = require('werkstatt');
+
+toFixed(3.14, 4); // -> '3.1400'
+toFixed(5.1346, 3); // -> '5.135'
+```
+</details>
+
+<details>
+<summary><strong>min</strong></summary>
+
+##### Arguments
+
+| argument | type | description |
+|-----------|------|------------|
+| value     | array of numbers or several args  | where to look for the lowest value |
+
+```javascript
+const { min } = require('werkstatt');
+
+min(264, 736, 223, 979, 124); // -> 124
+min([543, 333, 22, 1865, 976]); // -> 22
+```
+</details>
+
+<details>
+<summary><strong>max</strong></summary>
+
+##### Arguments
+
+| argument | type | description |
+|-----------|------|------------|
+| value     | array of numbers or several args  | where to look for the highest value |
+
+```javascript
+const { max } = require('werkstatt');
+
+max(264, 736, 223, 979, 124); // -> 979
+max([543, 333, 22, 1865, 976]); // -> 1865
+```
+</details>
+
+<details>
+<summary><strong>truncate</strong></summary>
+
+##### Arguments
+
+| argument | type | description |
+|-----------|------|------------|
+| value     | number  | float number  where decimales will be removed |
+
+```javascript
+const { truncate } = require('werkstatt');
+
+truncate(123.4567); // -> 123
+```
+</details>
+
+<details>
+<summary><strong>random</strong></summary>
+
+##### Arguments
+
+| argument | type | description |
+|-----------|------|------------|
+| lower     | number  | lower number desired |
+| upper     | number  | upper number desired |
+| precision     | number  | amount of decimals desired |
+
+```javascript
+const { random } = require('werkstatt');
+
+random(5, 10, 2); // -> 9.32
+```
+</details>
 
 ### Float
 
@@ -229,6 +314,24 @@ isGreaterThan(1, 50); // -> false
 const { roundUp } = require('werkstatt');
 
 roundUp(3.2) // -> 4
+```
+</details>
+
+<details>
+<summary><strong>round</strong></summary>
+
+##### Arguments
+
+| argument | type  |
+|-----------|-------|
+| number    | float |
+
+```javascript
+const { round } = require('werkstatt');
+
+round(5.95); // -> 6
+round(5.5); // -> 6
+round(5.05); // -> 5
 ```
 </details>
 
@@ -494,6 +597,130 @@ isArray([3]); // -> true
 ```
 </details>
 
+<details>
+<summary><strong>uniquifiy</strong></summary>
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| array     | array  | Array to be processed | array |
+
+```javascript
+const { uniquify } = require('werkstatt');
+
+const shoes = [
+  { id: 1, name: "nikesb" },
+  { id: 1, name: "nikesb" },
+  { id: 2, name: "lakai" },
+  { id: 2, name: "lakai" },
+  { id: 3, name: "etnies" },
+];
+
+const unique = uniquify(shoes, (a,b) => a.id === b.id);
+
+/*
+
+[
+  { id: 1, name: "nikesb" },
+  { id: 2, name: "lakai" },
+  { id: 3, name: "etnies" },
+]
+
+*/
+
+```
+</details>
+
+<details>
+<summary><strong>map</strong></summary>
+
+##### Arguments
+
+| argument | type | description |
+|-----------|------|------------|
+| array     | array  | Array to be processed |
+| transform     | func  | function to apply to element in the array |
+
+```javascript
+const { map } = require('werkstatt');
+
+const numbers = [1, 2, 3];
+map(numbers, x => x * 2); // -> [2, 4, 6]
+
+```
+</details>
+
+### Object
+
+<details>
+<summary><strong>mergeDeep</strong></summary>
+
+##### Arguments
+
+| argument | type |
+|-----------|------|
+| target     | object  |
+| source     | object  |
+
+```javascript
+const { mergeDeep } = require('werkstatt');
+
+const obj1 = {
+    a: 1,
+    b: 1, 
+    c: { x: 1, y: 1 },
+    d: [ 1, 1 ]
+  }
+
+const obj2 = {
+  b: 2, 
+  c: { y: 2, z: 2 },
+  d: [ 2, 2 ],
+  e: 2
+}
+
+
+mergeDeep(obj1, obj2);
+
+/*
+
+{ 
+  a: 1, 
+  b: 2, 
+  c: { x: 1, y: 2, z: 2 }, 
+  d: [ 1, 1, 2, 2 ], 
+  e: 2 
+};
+*/
+
+```
+</details>
+
+<details>
+<summary><strong>isObject</strong></summary>
+
+##### Arguments
+
+| argument | type |
+|-----------|------|
+| obj     | any  |
+
+```javascript
+const { isObject } = require('werkstatt');
+
+const obj1 = {
+  a: 1,
+  b: 1, 
+  c: { x: 1, y: 1 },
+  d: [ 1, 1 ]
+}
+
+isObject(obj1); // -> true
+
+```
+</details>
+
 ### Other
 
 <details>
@@ -660,6 +887,26 @@ const { every } = require('werkstatt');
 every('adios' === 'adios', 'hola' === 'hola').is.true // -> true
 every('adios', 'hola').is.string // -> true
 every(1, 2).is.number // -> true
+```
+</details>
+
+<details>
+<summary><strong>compose</strong></summary>
+
+##### Arguments
+
+| argument | type | description |  returns   |
+|-----------|------|------------|------------|
+| fns     | array  | functions to be executed | function |
+
+```javascript
+const { compose } = require('werkstatt');
+
+const h = n => n / 2;
+const g = n => n + 1;
+const f = n => n * 2;
+
+compose(f, g, h)(20) // -> 22
 ```
 </details>
 

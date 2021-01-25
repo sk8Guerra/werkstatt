@@ -1,4 +1,5 @@
 import typeOf from '../other/typeOf';
+import areEqual from '../other/areEqual';
 
 /**
  * Determines whether or not the value is an array.
@@ -8,7 +9,7 @@ import typeOf from '../other/typeOf';
  */
 
 const isArray = value => {
-    return typeOf(value) === 'array';
+    return areEqual(typeOf(value), 'array');
 };
 
 export default isArray;

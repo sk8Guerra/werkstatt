@@ -7,9 +7,15 @@ import isOdd from './number/isOdd';
 import isEven from './number/isEven';
 import isNegative from './number/isNegative';
 import isGreaterThan from './number/isGreaterThan';
+import min from './number/min';
+import max from './number/max';
+import toFixed from './number/fixed/toFixed';
+import truncate from './number/truncate';
+import random from './number/random';
 
 import roundUp from  './float/roundUp';
 import roundDown from './float/roundDown';
+import round from './float/round'
 import isFloat from './float/isFloat';
 
 import capitalizeFirstLetter from './string/capitalizeFirstLetter';
@@ -26,6 +32,8 @@ import insertAt from './array/insertAt';
 import isArrayOfNumbers from './array/isArrayOfNumbers';
 import toArray from './array/toArray';
 import isArray from './array/isArray';
+import uniquify from './array/uniquify';
+import map from './array/map';
 
 import typeOf from './other/typeOf';
 import areEqual from './other/areEqual';
@@ -35,6 +43,11 @@ import isEmpty from './other/isEmpty';
 import has from './other/has';
 import isNull from './other/isNull';
 import every from './other/every';
+import compose from './other/compose';
+import removeFrom from './other/removeFrom';
+
+import mergeDeep from './object/mergeDeep';
+import isObject from './object/isObject';
 
 export {
   isZero,
@@ -46,7 +59,13 @@ export {
   isEven,
   isNegative,
   isGreaterThan,
+  min,
+  max,
+  toFixed,
+  truncate,
+  random,
 
+  round,
   roundUp,
   roundDown,
   isFloat,
@@ -65,6 +84,8 @@ export {
   isArrayOfNumbers,
   toArray,
   isArray,
+  uniquify,
+  map,
   
   typeOf,
   areEqual,
@@ -73,5 +94,10 @@ export {
   isEmpty,
   has,
   isNull,
-  every
+  every,
+  compose,
+  removeFrom,
+
+  mergeDeep,
+  isObject
 };

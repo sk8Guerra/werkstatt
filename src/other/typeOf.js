@@ -19,7 +19,7 @@ function typeOf(value) {
     if (isFloat(value)) return 'float'
     return 'number'
   };
-  if (value instanceof Array) return 'array';
+  if (value instanceof Array && Array.isArray(value)) return 'array';
   if (value instanceof Object) return 'object';
   return typeof(value);
 }
