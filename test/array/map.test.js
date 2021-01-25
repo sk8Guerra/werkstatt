@@ -1,4 +1,4 @@
-const { map } = require('../../dist');
+const { map, lengthOf } = require('../../dist');
 
 test(
   'Returns a new array populated with the results of calling a provided function on every element of the passed array.', 

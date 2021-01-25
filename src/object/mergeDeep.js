@@ -5,8 +5,10 @@ import isArray from '../array/isArray';
  * Performs a deep merge of objects and returns a new object. Does not modify
  * objects (immutable) and merges arrays via concatenation.
  *
- * @param {...object} objects - Objects to merge
- * @returns {object} New object with merged key/values
+ * 
+ * @param {Object} target - Where second object will be merged.
+ * @param {Object} source - Object to merge in terget.
+ * @return {Object} new object merged.
  * 
 */
 

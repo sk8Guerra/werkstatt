@@ -695,6 +695,9 @@ mergeDeep(obj1, obj2);
 */
 
 ```
+
+Author: [jhildenbiddle](https://stackoverflow.com/questions/27936772/how-to-deep-merge-instead-of-shallow-merge/48218209#48218209)
+
 </details>
 
 <details>
