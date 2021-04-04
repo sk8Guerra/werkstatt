@@ -82,6 +82,9 @@ const { add } = require("werkstatt");
 add(3, 6, 11); // -> 20
 const numbers = [1, 2, 3];
 add(...numbers); // -> 6
+
+// or just pass the array
+add(numbers); // -> 6
 ```
 
 </details>
