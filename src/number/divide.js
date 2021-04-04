@@ -1,3 +1,4 @@
+import isNumber from "./isNumber";
 
 /**
  * Divide two numbers.
@@ -11,7 +12,11 @@
 
 const divide = (...values) => {
   const [dividend, divider] = values;
-  return dividend / divider;
+  if (isNumber(dividend) && isNumber(divider)) {
+    return Number(dividend) / Number(divider);
+  }
+
+  return 0;
 }
 
 export default divide;
