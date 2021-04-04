@@ -7,7 +7,7 @@ import isNumber from './isNumber';
  * @returns {boolean} true: if the number is an odd number. false: if the number is not an odd number.
  */
 
-function isOdd(number) {
+const isOdd = (number) => {
   const n = Math.abs(number);
   if (!isNumber(n)) {
     throw new TypeError('expected a number');

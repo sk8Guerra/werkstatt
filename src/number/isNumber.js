@@ -6,7 +6,7 @@
  * @returns {boolean} true: if the value is number. false: if the value is not a number.
  */
 
-function isNumber (value) {
+const isNumber = (value) => {
   if (typeof value === 'number') {
     return value - value === 0;
   }

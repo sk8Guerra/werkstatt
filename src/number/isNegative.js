@@ -6,7 +6,7 @@
  * @returns {boolean} true: if the number is a negative number. false: if the number is not a negative number.
  */
 
-function isNegative(number) {
+const isNegative = (number) => {
   return Math.sign(number) === -1;
 }
 

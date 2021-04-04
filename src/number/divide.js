@@ -9,7 +9,7 @@
  * @returns {number} The result of dividing two numbers.
  */
 
-function divide(...values) {
+const divide = (...values) => {
   const [dividend, divider] = values;
   return dividend / divider;
 }

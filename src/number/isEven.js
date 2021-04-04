@@ -7,7 +7,7 @@ import isOdd from './isOdd';
  * @returns {boolean} true: if the value is an even number. false: if the value is not an even number.
  */
 
-function isEven(number) {
+const isEven = (number) => {
   return !isOdd(number);
 };
 

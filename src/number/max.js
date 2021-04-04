@@ -1,5 +1,4 @@
-import typeOf from '../other/typeOf';
-import areEqual from '../other/areEqual';
+import isArray from "../array/isArray";
 
 /**
  * Returns the largest value from a list of numbers.
@@ -9,8 +8,9 @@ import areEqual from '../other/areEqual';
  */
 
 const max = (...values) => {
-  if (areEqual(typeOf(values[0]), 'array')) {
-    return Math.max.apply(Math, values[0]); 
+  const [value] = values;
+  if (isArray(value)) {
+    return Math.max.apply(Math, value);
   }
   return Math.max.apply(Math, values); 
 }

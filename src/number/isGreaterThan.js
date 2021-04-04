@@ -7,7 +7,7 @@
  * @returns {boolean} true: if the value first argument is greater than the second. false: if first argument is not greater than the second.
  */
 
-function isGreaterThan(...values) {
+const isGreaterThan = (...values) => {
   const [firstValue, secondValue] = values;
   return firstValue > secondValue
 }

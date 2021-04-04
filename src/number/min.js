@@ -1,5 +1,4 @@
-import typeOf from '../other/typeOf';
-import areEqual from '../other/areEqual';
+import isArray from "../array/isArray";
 
 /**
  * Returns the lowest-valued number passed into it.
@@ -8,11 +7,12 @@ import areEqual from '../other/areEqual';
  * @returns {number} The lowest-valued number.
  */
 
-const min = (...array) => {
-  if (areEqual(typeOf(array[0]), 'array')) {
-    return Math.min.apply(Math, array[0]);
+const min = (...values) => {
+  const [value] = values;
+  if (isArray(value)) {
+    return Math.min.apply(Math, value);
   }
-  return Math.min.apply(Math, array);
+  return Math.min.apply(Math, values);
 };
 
 export default min;
