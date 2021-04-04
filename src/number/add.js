@@ -13,13 +13,13 @@ import isArray from '../array/isArray';
  */
 
 const add = (...values) => {
-  const value = values[0];
+  const [value] = values;
   if (isArray(value) && isArrayOfNumbers(value)) {
-    return reduce(map(value, x => Number(x)));
+    return reduce(map(value, element => Number(element)));
   }
 
   if (isArrayOfNumbers(values)) {
-    return reduce(map(values, x => Number(x)));
+    return reduce(map(values, element => Number(element)));
   }
 
   return 0;
