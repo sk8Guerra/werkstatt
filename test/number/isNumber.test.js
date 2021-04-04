@@ -12,5 +12,6 @@ test('if the passed argument is not a number', () => {
   expect(isNumber({})).toEqual(false);
   expect(isNumber("")).toEqual(false);
   expect(isNumber(true)).toEqual(false);
+  expect(isNumber(false)).toEqual(false);
   expect(isNumber(new Date())).toEqual(false);
 });

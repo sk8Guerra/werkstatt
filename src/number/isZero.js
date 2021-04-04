@@ -6,7 +6,7 @@
  * @returns {boolean} true: if the number is zero. false: if the number is not zero.
  */
 
-function isZero (number) {
+const isZero = (number) => {
   return number === 0;
 };
 

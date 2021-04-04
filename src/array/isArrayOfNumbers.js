@@ -7,7 +7,7 @@ import isNumber from '../number/isNumber';
  * @returns {boolean} true: if every element in the array is number. false: if any element in the array is not number.
  */
 
-function isArrayOfNumbers(array) {
+const isArrayOfNumbers = (array) => {
   for (let number = 0; number < array.length; number++) {
     if (isNumber(array[number])) continue;
     return false;
