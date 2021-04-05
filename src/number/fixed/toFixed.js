@@ -1,3 +1,5 @@
+import isDefined from "../../other/isDefined";
+import isNumber from "../isNumber";
 
 /**
  * Converts a given number or float to fixed-point notation.
@@ -8,7 +10,11 @@
  */
 
 const toFixed = (value, precision) => {
-  return value.toFixed(precision);
+  if (isDefined(value) && isNumber(value)) {
+    return value.toFixed(precision);
+  }
+
+  return '0.0'
 };
 
 export default toFixed;
