@@ -4,9 +4,14 @@
  * @param {number} number The number to round up.
  * @returns {number} The number rounded up.
  */
+import isNumber from "../number/isNumber";
 
-function roundUp(number) {
-  return Math.ceil(number);
+function roundUp(value) {
+  if (isNumber(value)) {
+    return Math.ceil(value);
+  }
+
+  return 0;
 }
 
 export default roundUp;
