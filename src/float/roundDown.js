@@ -1,3 +1,5 @@
+import isNumber from "../number/isNumber";
+
 /**
  * Round down the number to the previous integer.
  *
@@ -5,8 +7,12 @@
  * @returns {number} The number rounded down.
  */
 
-function roundDown(number) {
-  return Math.floor(number);
+const roundDown = (value) => {
+  if(isNumber(value)) {
+    return Math.floor(value);
+  }
+
+  return 0;
 }
 
 export default roundDown;
