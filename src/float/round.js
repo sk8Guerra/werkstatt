@@ -1,3 +1,5 @@
+import isNumber from "../number/isNumber";
+
 /**
  * Rounds the number to the nearest integer.
  *
@@ -5,8 +7,12 @@
  * @returns {number} The number rounded.
  */
 
-const round = number => {
-    return Math.round(number);
+const round = (value) => {
+    if (isNumber(value)) {
+        return Math.round(value);
+    }
+
+    return 0;
 }
   
 export default round;
