@@ -471,7 +471,7 @@ That means that those values _tend to_ to be false. So if you pass as parameter 
 ```javascript
 const { isTruthy } = require('werkstatt');
 
-isTruthy(3)); // -> true
+isTruthy(3); // -> true
 isTruthy({}); // -> true
 
 isTruthy(undefined); // -> false
@@ -493,7 +493,7 @@ Exactly the opposite of `isTruthy`.
 ```javascript
 const { isFalsy } = require('werkstatt');
 
-isFalsy(3)); // -> false
+isFalsy(3); // -> false
 isFalsy(null); // -> true
 
 ```
@@ -959,7 +959,7 @@ compose(f, g, h)(20); // -> 22
 </details>
 
 <details>
-<summary><strong><h4><removeFrom/h4></strong></summary>
+<summary><strong><h4>removeFrom</h4></strong></summary>
 
 ##### Arguments
 
