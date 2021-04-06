@@ -50,7 +50,7 @@ yarn add werkstatt
 ### Number
 
 <details>
-<summary><strong><h4>isZero</h4></strong></summary>
+<summary><strong>isZero</strong></summary>
 
 ##### Arguments
 
