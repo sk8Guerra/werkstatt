@@ -68,7 +68,7 @@ isZero(0); // -> true
 </details>
 
 <details>
-<summary><strong>add</strong></summary>
+<summary><strong><h4>add</h4></strong></summary>
 
 ##### Arguments
 
@@ -90,7 +90,7 @@ add(numbers); // -> 6
 </details>
 
 <details>
-<summary><strong>subtract</strong></summary>
+<summary><strong><h4>subtract</h4></strong></summary>
 
 ##### Arguments
 
@@ -109,7 +109,7 @@ subtract(6, 3); // -> 3
 </details>
 
 <details>
-<summary><strong>divide</strong></summary>
+<summary><strong><h4>divide</h4></strong></summary>
 
 ##### Arguments
 
@@ -128,7 +128,7 @@ divide(10, 5); // -> 2
 </details>
 
 <details>
-<summary><strong>isNumber</strong></summary>
+<summary><strong><h4>isNumber</h4></strong></summary>
 
 ##### Arguments
 
@@ -152,7 +152,7 @@ isNumber(true); // -> false
 </details>
 
 <details>
-<summary><strong>isOdd</strong></summary>
+<summary><strong><h4>isOdd</h4></strong></summary>
 
 ##### Arguments
 
@@ -172,7 +172,7 @@ isOdd(4); // -> false
 </details>
 
 <details>
-<summary><strong>isEven</strong></summary>
+<summary><strong><h4>isEven</h4></strong></summary>
 
 ##### Arguments
 
@@ -192,7 +192,7 @@ isEven(4); // -> true
 </details>
 
 <details>
-<summary><strong>isNegative</strong></summary>
+<summary><strong><h4>isNegative</h4></strong></summary>
 
 ##### Arguments
 
@@ -210,7 +210,7 @@ isNegative(4); // -> false
 </details>
 
 <details>
-<summary><strong>isGreaterThan</strong></summary>
+<summary><strong><h4>isGreaterThan</h4></strong></summary>
 
 ##### Arguments
 
@@ -229,7 +229,7 @@ isGreaterThan(1, 50); // -> false
 </details>
 
 <details>
-<summary><strong>toFixed</strong></summary>
+<summary><strong><h4>toFixed</h4></strong></summary>
 
 ##### Arguments
 
@@ -248,7 +248,7 @@ toFixed(5.1346, 3); // -> '5.135'
 </details>
 
 <details>
-<summary><strong>min</strong></summary>
+<summary><strong><h4>min</h4></strong></summary>
 
 ##### Arguments
 
@@ -266,7 +266,7 @@ min([543, 333, 22, 1865, 976]); // -> 22
 </details>
 
 <details>
-<summary><strong>max</strong></summary>
+<summary><strong><h4>max</h4></strong></summary>
 
 ##### Arguments
 
@@ -284,7 +284,7 @@ max([543, 333, 22, 1865, 976]); // -> 1865
 </details>
 
 <details>
-<summary><strong>truncate</strong></summary>
+<summary><strong><h4>truncate</h4></strong></summary>
 
 ##### Arguments
 
@@ -301,7 +301,7 @@ truncate(123.4567); // -> 123
 </details>
 
 <details>
-<summary><strong>random</strong></summary>
+<summary><strong><h4>random</h4></strong></summary>
 
 ##### Arguments
 
@@ -322,7 +322,7 @@ random(5, 10, 2); // -> 9.32
 ### Float
 
 <details>
-<summary><strong>roundUp</strong></summary>
+<summary><strong><h4>roundUp</h4></strong></summary>
 
 ##### Arguments
 
@@ -339,7 +339,7 @@ roundUp(3.2); // -> 4
 </details>
 
 <details>
-<summary><strong>round</strong></summary>
+<summary><strong><h4>round</h4></strong></summary>
 
 ##### Arguments
 
@@ -358,7 +358,7 @@ round(5.05); // -> 5
 </details>
 
 <details>
-<summary><strong>roundDown</strong></summary>
+<summary><strong><h4>roundDown</h4></strong></summary>
 
 ##### Arguments
 
@@ -375,7 +375,7 @@ roundDown(3.8); // -> 3
 </details>
 
 <details>
-<summary><strong>isFloat</strong></summary>
+<summary><strong><h4>isFloat</h4></strong></summary>
 
 ##### Arguments
 
@@ -395,7 +395,7 @@ isFloat(6.5); // -> true
 ### String
 
 <details>
-<summary><strong>capitalizeFirstLetter</strong></summary>
+<summary><strong><h4>capitalizeFirstLetter</h4></strong></summary>
 
 ##### Arguments
 
@@ -415,7 +415,7 @@ capitalizeFirstLetter("adios"); // -> 'Adios'
 </details>
 
 <details>
-<summary><strong>isEmail</strong></summary>
+<summary><strong><h4>isEmail</h4></strong></summary>
 
 ##### Arguments
 
@@ -435,7 +435,7 @@ isEmail("a@a.co"); // -> true
 </details>
 
 <details>
-<summary><strong>isString</strong></summary>
+<summary><strong><h4>isString</h4></strong></summary>
 
 ##### Arguments
 
@@ -455,7 +455,7 @@ isString([3]); // -> false
 ### Boolean
 
 <details>
-<summary><strong>isTruthy</strong></summary>
+<summary><strong><h4>isTruthy</h4></strong></summary>
 
 > Whenever JavaScript expects a boolean value (e.g. for the condition of an `if` statement), any value can be used. It will be interpreted as either `true` or `false`. The following values are interpreted as `false`:
 >
@@ -486,7 +486,7 @@ isTruthy(''); // -> false
 </details>
 
 <details>
-<summary><strong>isFalsy</strong></summary>
+<summary><strong><h4>isFalsy</h4></strong></summary>
 
 Exactly the opposite of `isTruthy`.
 
@@ -503,7 +503,7 @@ isFalsy(null); // -> true
 ### Array
 
 <details>
-<summary><strong>orderAsc</strong></summary>
+<summary><strong><h4>orderAsc</h4></strong></summary>
 
 ##### Arguments
 
@@ -522,7 +522,7 @@ orderAsc([8, 10, 6]); // -> [6, 8, 10]
 </details>
 
 <details>
-<summary><strong>lengthOf</strong></summary>
+<summary><strong><h4>lengthOf</h4></strong></summary>
 
 ##### Arguments
 
@@ -539,7 +539,7 @@ lengthOf([8, 10, 6]); // -> 3
 </details>
 
 <details>
-<summary><strong>isLengthOf</strong></summary>
+<summary><strong><h4>isLengthOf</h4></strong></summary>
 
 ##### Arguments
 
@@ -558,7 +558,7 @@ isLengthOf({ name: "Jorge", lasName: "Guerra" }, 2); // -> true
 </details>
 
 <details>
-<summary><strong>insertAt</strong></summary>
+<summary><strong><h4>insertAt</h4></strong></summary>
 
 ##### Arguments
 
@@ -577,7 +577,7 @@ insertAt([1, 2, 3], 1, 4); // -> [1, 4, 2, 3]
 </details>
 
 <details>
-<summary><strong>isArrayOfNumbers</strong></summary>
+<summary><strong><h4>isArrayOfNumbers</h4></strong></summary>
 
 ##### Arguments
 
@@ -595,7 +595,7 @@ isArrayOfNumbers([1, 2, 3]); // -> true
 </details>
 
 <details>
-<summary><strong>toArray</strong></summary>
+<summary><strong><h4>toArray</h4></strong></summary>
 
 ##### Arguments
 
@@ -617,7 +617,7 @@ testToArray(1, 2, 3); // -> [ 1, 2, 3 ]
 </details>
 
 <details>
-<summary><strong>isArray</strong></summary>
+<summary><strong><h4>isArray</h4></strong></summary>
 
 ##### Arguments
 
@@ -635,7 +635,7 @@ isArray([3]); // -> true
 </details>
 
 <details>
-<summary><strong>uniquifiy</strong></summary>
+<summary><strong><h4>uniquifiy</h4></strong></summary>
 
 ##### Arguments
 
@@ -670,7 +670,7 @@ const unique = uniquify(shoes, (a, b) => a.id === b.id);
 </details>
 
 <details>
-<summary><strong>map</strong></summary>
+<summary><strong><h4>map</h4></strong></summary>
 
 ##### Arguments
 
@@ -691,7 +691,7 @@ map(numbers, (x) => x * 2); // -> [2, 4, 6]
 ### Object
 
 <details>
-<summary><strong>mergeDeep</strong></summary>
+<summary><strong><h4>mergeDeep</h4></strong></summary>
 
 ##### Arguments
 
@@ -736,7 +736,7 @@ Author: [jhildenbiddle](https://stackoverflow.com/questions/27936772/how-to-deep
 </details>
 
 <details>
-<summary><strong>isObject</strong></summary>
+<summary><strong><h4>isObject</h4></strong></summary>
 
 ##### Arguments
 
@@ -762,7 +762,7 @@ isObject(obj1); // -> true
 ### Other
 
 <details>
-<summary><strong>typeOf</strong></summary>
+<summary><strong><h4>typeOf</h4></strong></summary>
 
 ##### Arguments
 
@@ -787,7 +787,7 @@ typeOf(6); // -> number
 </details>
 
 <details>
-<summary><strong>areEqual</strong></summary>
+<summary><strong><h4>areEqual</h4></strong></summary>
 
 ##### Arguments
 
@@ -815,7 +815,7 @@ areEqual(...ages); // -> true
 </details>
 
 <details>
-<summary><strong>isUndefined</strong></summary>
+<summary><strong><h4>isUndefined</h4></strong></summary>
 
 ##### Arguments
 
@@ -833,7 +833,7 @@ isUndefined("a@a.co"); // -> false
 </details>
 
 <details>
-<summary><strong>isDefined</strong></summary>
+<summary><strong><h4>isDefined</h4></strong></summary>
 
 ##### Arguments
 
@@ -856,7 +856,7 @@ isDefined({}); // -> true
 </details>
 
 <details>
-<summary><strong>isEmpty</strong></summary>
+<summary><strong><h4>isEmpty</h4></strong></summary>
 
 ##### Arguments
 
@@ -880,7 +880,7 @@ isEmpty(true); // -> true
 </details>
 
 <details>
-<summary><strong>has</strong></summary>
+<summary><strong><h4>has</h4></strong></summary>
 
 ##### Arguments
 
@@ -900,7 +900,7 @@ has("Jorge", "e"); // -> true
 </details>
 
 <details>
-<summary><strong>isNull</strong></summary>
+<summary><strong><h4>isNull</h4></strong></summary>
 
 ##### Arguments
 
@@ -919,7 +919,7 @@ isNull("Hola"); // -> false
 </details>
 
 <details>
-<summary><strong>every</strong></summary>
+<summary><strong><h4>every</h4></strong></summary>
 
 ##### Arguments
 
@@ -938,7 +938,7 @@ every(1, 2).is.number; // -> true
 </details>
 
 <details>
-<summary><strong>compose</strong></summary>
+<summary><strong><h4>compose</h4></strong></summary>
 
 ##### Arguments
 
@@ -959,7 +959,7 @@ compose(f, g, h)(20); // -> 22
 </details>
 
 <details>
-<summary><strong>removeFrom</strong></summary>
+<summary><strong><h4><removeFrom/h4></strong></summary>
 
 ##### Arguments
 
