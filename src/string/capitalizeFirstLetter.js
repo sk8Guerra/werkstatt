@@ -1,3 +1,4 @@
+import isString from "./isString";
 
 /**
  * Capitalize the first letter of a string.
@@ -6,9 +7,12 @@
  * @returns {string} The string with only the first letter capitalized.
  */
 
-function capitalizeFirstLetter(string) {
-  if (typeof string !== 'string') return '';
-  return string.charAt(0).toUpperCase() + string.slice(1);
+const capitalizeFirstLetter = (value) => {
+  if (isString(value)) {
+    return value.charAt(0).toUpperCase() + value.slice(1);
+  }
+
+  return '';
 };
 
 export default capitalizeFirstLetter;
