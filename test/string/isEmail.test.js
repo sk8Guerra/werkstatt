@@ -3,6 +3,11 @@ const { isEmail } = require('../../dist');
 test('if the passed argument is undefined', () => {
     expect(isEmail(3)).toEqual(false);
     expect(isEmail(3)).toEqual(false);
+    expect(isEmail(undefined)).toEqual(false);
+    expect(isEmail(null)).toEqual(false);
+    expect(isEmail({})).toEqual(false);
+    expect(isEmail([])).toEqual(false);
+
     expect(isEmail("@lo.com")).toEqual(false);
     expect(isEmail("a@a.c")).toEqual(false);
     expect(isEmail("a@a.co")).toEqual(true);
