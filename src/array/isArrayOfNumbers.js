@@ -1,4 +1,5 @@
 import isNumber from '../number/isNumber';
+import isArray from "./isArray";
 
 /**
  * Check whether every element in the array is number type or not.
@@ -8,11 +9,15 @@ import isNumber from '../number/isNumber';
  */
 
 const isArrayOfNumbers = (array) => {
-  for (let number = 0; number < array.length; number++) {
-    if (isNumber(array[number])) continue;
-    return false;
+  if (isArray(array)) {
+    for (let number = 0; number < array.length; number++) {
+      if (isNumber(array[number])) continue;
+      return false;
+    }
+    return true;
   }
-  return true;
+
+  return false;
 }
 
 export default isArrayOfNumbers;
