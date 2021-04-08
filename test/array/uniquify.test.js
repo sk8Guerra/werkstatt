@@ -44,4 +44,7 @@ test('Makes every object in an array unique.', () => {
 
     expect(lengthOf(uniquify(fruit, (a, b) => a === b))).toBe(5);
     expect(uniquify(fruit, (a, b) => a === b)).toEqual(expect.arrayContaining(expected2));
+
+    expect(uniquify({}, (a, b) => a === b)).toEqual([]);
+    expect(uniquify(fruit, undefined)).toEqual([]);
 });
