@@ -24,5 +24,9 @@ test(
     expect(mappedNames).toEqual(expect.arrayContaining(expected2));
     expect(lengthOf(mappedYears)).toBe(2);
     expect(mappedYears).toEqual(expect.arrayContaining(expected3));
+
+
+      expect(map(null, x => x * 2)).toBe(null);
+      expect(map(people, undefined)).toEqual(expect.arrayContaining(people));
   }
 );
