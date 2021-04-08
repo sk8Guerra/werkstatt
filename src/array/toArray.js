@@ -1,3 +1,4 @@
+import isDefined from "../other/isDefined";
 
 /**
  * Converts array like objects/NodeList to array. e.g. 'arguments' arg in a function.
@@ -7,7 +8,11 @@
  */
 
 const toArray = (arrayLikeObject) => {
-    return Array.prototype.slice.call(arrayLikeObject);
+    if (isDefined(arrayLikeObject)) {
+        return Array.prototype.slice.call(arrayLikeObject);
+    }
+
+    return []
 };
 
 export default toArray;
