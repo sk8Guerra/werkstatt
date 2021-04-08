@@ -8,4 +8,7 @@ test('if the passed argument is an array', () => {
 test('if the passed argument is not a string', () => {
   expect(isArray({ hola: [] })).toEqual(false);
   expect(isArray(10)).toEqual(false);
+    expect(isArray(undefined)).toEqual(false);
+    expect(isArray(false)).toEqual(false);
+    expect(isArray(null)).toEqual(false);
 });
