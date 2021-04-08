@@ -1,5 +1,6 @@
 import subtract from '../number/subtract';
 import lengthOf from './lengthOf';
+import isArray from "./isArray";
 
 function swap(items, firstIndex, secondIndex) {
   let temp = items[firstIndex];
@@ -47,8 +48,12 @@ function quickSort(items, left, right) {
  * @returns {number[]} The list of numbers ordered.
  */
 
-function orderAsc(array) {
-  return quickSort(array, 0, subtract(lengthOf(array), 1))
+const orderAsc = (array) => {
+  if (isArray(array)) {
+      return quickSort(array, 0, subtract(lengthOf(array), 1));
+  }
+
+  return array;
 }
 
 export default orderAsc;
