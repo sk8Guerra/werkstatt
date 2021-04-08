@@ -1,3 +1,4 @@
+import isDefined from "../other/isDefined";
 
 /**
  * Get length of a JSON or an array.
@@ -6,11 +7,15 @@
  * @returns {number} The length.
  */
 
-function lengthOf(value) {
-  if(Object.getPrototypeOf(value) === Object.prototype) {
-    return Object.keys(value).length;
+const lengthOf = (value) => {
+  if(isDefined(value)) {
+    if(Object.getPrototypeOf(value) === Object.prototype) {
+      return Object.keys(value).length;
+    }
+    return value.length;
   }
-  return value.length;
+
+  return 0;
 }
 
 export default lengthOf;
