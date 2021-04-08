@@ -1,5 +1,5 @@
-import areEqual from '../other/areEqual';
-import typeOf from '../other/typeOf';
+import isUndefined from "../other/isUndefined";
+import isNull from "../other/isNull";
 
 /**
  * Useful to ensure that a json or an array has a specific length.
@@ -10,7 +10,7 @@ import typeOf from '../other/typeOf';
  */
 
 function isLengthOf(value, len) {
-  if (areEqual(typeOf(value), 'undefined') || areEqual(typeOf(value), 'null')) return false;
+  if (isUndefined(value) || isNull(value)) return false;
   if(Object.getPrototypeOf(value) === Object.prototype) {
     return Object.keys(value).length === len;
   }
