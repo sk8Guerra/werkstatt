@@ -14,4 +14,8 @@ test('Check wether an argument is object or not', () => {
 
   expect(result1).toBe(true);
   expect(result2).toBe(false);
+
+  expect(isObject(null)).toBe(false);
+  expect(isObject(undefined)).toBe(false);
+  expect(isObject('undefined')).toBe(false);
 });
