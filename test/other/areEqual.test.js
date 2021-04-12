@@ -16,3 +16,8 @@ test('if the passed arguments are not equal', () => {
   expect(areEqual(...saludos)).toEqual(false);
   expect(areEqual(true, false)).toEqual(false);
 });
+
+test('if the passed arguments are equal with array as argument', () => {
+    expect(areEqual([3, 3, 3, 3, 3])).toEqual(true);
+    expect(areEqual(['hola', 'hallo'])).toEqual(false);
+});

@@ -1,3 +1,4 @@
+import isArray from "../array/isArray";
 
 /**
  * Check if every passed argument is equal to each other.
@@ -7,9 +8,19 @@
  */
 
 const areEqual = (...values) => {
-  const firstValue = values[0];
-  for(const value of values) {
-    if (firstValue === value) continue;
+  const [firstValue] = values;
+
+  if (isArray(firstValue)) {
+    const [firstValueOfArray] = firstValue;
+    for(const element of firstValue) {
+      if (element === firstValueOfArray) continue;
+      else return false;
+    }
+    return true;
+  }
+
+  for(const element of values) {
+    if (element === firstValue) continue;
     else return false;
   }
   return true;
