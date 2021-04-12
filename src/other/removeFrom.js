@@ -1,6 +1,8 @@
 import isObject from '../object/isObject';
 import isString from '../string/isString';
 import isArray from '../array/isArray';
+import isUndefined from "./isUndefined";
+import isNull from "./isNull";
 
 /**
  * Removes in an immutable way values or properties from arrays and objects.
@@ -11,7 +13,11 @@ import isArray from '../array/isArray';
  */
 
 const removeFrom = (item, ...propsOrValues) => {
-  const props = propsOrValues[0];
+  const [props] = propsOrValues;
+
+  if (isUndefined(item) || isNull(item)) return null;
+  if (isUndefined(props) || isNull(props)) return null;
+
   if (isArray(props)) {
     if (isObject(item)) {
       let temp = Object.assign({}, item);
@@ -23,7 +29,9 @@ const removeFrom = (item, ...propsOrValues) => {
     if (isArray(item)) {
       let temp = [ ...item ];
       for (const value in props) {
-        let index = temp.indexOf(props[value]);
+        const element = props[value]
+        if (isUndefined(element) || isNull(element)) return null;
+        let index = temp.indexOf(element);
         temp.splice(index, 1);
       }
       return temp;

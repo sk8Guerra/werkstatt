@@ -1,5 +1,16 @@
 const { removeFrom, lengthOf } = require('../../dist');
 
+test('Handle undefineds', () => {
+    expect(removeFrom(undefined, 'name')).toBe(null)
+    expect(removeFrom(null, 'name')).toBe(null)
+
+    expect(removeFrom([1, 2, 4], undefined)).toBe(null)
+    expect(removeFrom([1, 2, 4], undefined)).toBe(null)
+
+    expect(removeFrom([1, 2, 4], [undefined])).toBe(null)
+    expect(removeFrom([1, 2, 4], [1, null])).toBe(null)
+})
+
 test(
   'Removes several properties from an object. (immutable)',
   () => {
