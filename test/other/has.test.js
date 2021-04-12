@@ -5,4 +5,10 @@ test('if the second argument exists either: 1. as value in an array; 2. as prop 
     expect(has(["Hola", "adios"], "true")).toEqual(false);
     expect(has({ name: "Jorge" }, "name")).toEqual(true);
     expect(has("Jorge", "e")).toEqual(true);
+
+    expect(has("Jorge", undefined)).toEqual(false);
+    expect(has(["Hola", "adios"], undefined)).toEqual(false);
+    expect(has({ name: "Jorge" }, undefined)).toEqual(false);
+    expect(has(null, 'e')).toEqual(false);
+    expect(has(undefined, 'e')).toEqual(false);
 });

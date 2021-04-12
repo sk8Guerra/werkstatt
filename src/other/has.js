@@ -19,6 +19,8 @@ const has = (item, propOrValue) => {
   if(areEqual(typeOf(item), 'string')) {
     return item.includes(propOrValue);
   }
+
+  return false
 }
 
 export default has;
