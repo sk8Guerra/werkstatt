@@ -13,7 +13,9 @@
     "build:main": "babel --out-dir dist src",
     "build:umd": "webpack --output-filename index.umd.js",
     "build:umd.min": "webpack --output-filename index.umd.min.js -p",
-    "build:types": "tsc"
+    "build:types": "tsc",
+    "push:master": "git push origin master",
+    "add": "git add ."
   },
   "files": [
     "dist",
