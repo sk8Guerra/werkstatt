@@ -4,7 +4,7 @@
  * Iterates right-to-left over each function. The initial value will be an accumulated,
  * passing it through each function. 
  *
- * @param {Array<fns>} fns Arrays to be excecuted.
+ * @param {Array<fns>} fns Functions to be excecuted.
  * @returns {Function} Function that can be excecuted with an initial value.
  */
 
