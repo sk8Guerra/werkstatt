@@ -592,6 +592,14 @@ isLengthOf("hola", 0); // -> false
 isLengthOf({ name: "Jorge", lasName: "Guerra" }, 2); // -> true
 ```
 
+Or use the `.lengthOf prop` exposed by the `is()` function.
+
+```javascript
+const { is } = require("werkstatt");
+
+is(2).lengthOf([1, 2]) // -> true
+```
+
 </details>
 
 <details>
