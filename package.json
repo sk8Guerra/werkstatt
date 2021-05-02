@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "commit": "git-cz",
-    "test": "jest --coverage",
+    "test": "jest",
+    "coverage": "jest --coverage",
     "semantic-release": "semantic-release",
     "prebuild": "rimraf dist",
     "build": "npm-run-all --parallel build:*",

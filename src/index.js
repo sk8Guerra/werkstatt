@@ -45,6 +45,7 @@ import isNull from './other/isNull';
 import every from './other/every';
 import compose from './other/compose';
 import removeFrom from './other/removeFrom';
+import is from './other/is';
 
 import mergeDeep from './object/mergeDeep';
 import isObject from './object/isObject';
@@ -97,6 +98,7 @@ export {
   every,
   compose,
   removeFrom,
+  is,
 
   mergeDeep,
   isObject
