@@ -84,7 +84,7 @@ test('if .true get in object works correctly.', () => {
     expect(is(undefined).true).toEqual(false);
 });
 
-test('if .true get in object works correctly.', () => {
+test('if .false get in object works correctly.', () => {
     expect(is('hola').false).toEqual(false);
     expect(is('hola@email.co').false).toEqual(false);
     expect(is(true).false).toEqual(false);

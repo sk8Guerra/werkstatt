@@ -148,6 +148,15 @@ isNumber(3); // -> true
 isNumber(true); // -> false
 ```
 
+Or use the `.number getter` exposed by the `is()` function.
+
+```javascript
+const { is } = require("werkstatt");
+
+is(54).number; // -> true
+is([3]).number; // -> false
+```
+
 > NOTE: this is an implementation of [is-number](https://www.npmjs.com/package/is-number) package.
 
 </details>
@@ -391,6 +400,15 @@ isFloat(6); // -> false
 isFloat(6.5); // -> true
 ```
 
+Or use the `.float getter` exposed by the `is()` function.
+
+```javascript
+const { is } = require("werkstatt");
+
+is(5).float; // -> false
+is(6.5).float; // -> true
+```
+
 </details>
 
 ### String
@@ -431,6 +449,15 @@ isEmail("a@a.c"); // -> false
 isEmail("a@a.co"); // -> true
 ```
 
+Or use the `.email getter` exposed by the `is()` function.
+
+```javascript
+const { is } = require("werkstatt");
+
+is("a@a.c").email; // -> false
+is("a@a.co").email; // -> true
+```
+
 > Best regex [found out there](https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript).
 
 </details>
@@ -449,6 +476,15 @@ const { isString } = require("werkstatt");
 
 isString("Hola"); // -> true
 isString([3]); // -> false
+```
+
+Or use the `.string getter` exposed by the `is()` function.
+
+```javascript
+const { is } = require("werkstatt");
+
+is("Hola").string; // -> true
+is([3]).tring; // -> false
 ```
 
 </details>
