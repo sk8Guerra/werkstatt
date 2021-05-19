@@ -4,6 +4,8 @@ import isNumber from '../number/isNumber';
 import isFloat from '../float/isFloat';
 import lengthOf from '../array/lengthOf';
 import typeOf from "./typeOf";
+import has from "./has";
+
 
 const is = value => {
   const matchers = {};
@@ -18,6 +20,10 @@ const is = value => {
   Object.defineProperty(matchers, "false", { get: () => typeOf(value) === 'boolean' && !value });
   
   matchers.lengthOf = array => lengthOf(array) === value;
+
+  matchers.in = array => {
+    return has(array, value);
+  }
 
   return matchers;
 };

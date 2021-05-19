@@ -102,3 +102,7 @@ test('if .lengthOf() get in object works correctly.', () => {
     expect(is(2).lengthOf([1, 2])).toEqual(true);
     expect(is(10).lengthOf(['hola', 'adios'])).toEqual(false);
 });
+
+test ('if .in() get in object works correctly', () => {
+    expect(is("aspen").in(["aspen", "colorado"])).toBe(true);
+})
