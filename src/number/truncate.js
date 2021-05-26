@@ -1,5 +1,5 @@
-import isDefined from "../other/isDefined";
-import isNumber from "./isNumber";
+import isDefined from '../other/isDefined';
+import isNumber from './isNumber';
 
 /**
  * Returns the integer part of a number by removing any fractional digits.
@@ -9,11 +9,11 @@ import isNumber from "./isNumber";
  */
 
 const truncate = (value) => {
-  if(isDefined(value) && isNumber(value)) {
-    return Math.trunc(value) ;
+  if (isDefined(value) && isNumber(value)) {
+    return Math.trunc(value);
   }
 
   return 0;
-}
+};
 
 export default truncate;

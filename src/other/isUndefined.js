@@ -1,4 +1,3 @@
-
 /**
  * Check whether the passed value is undefined or not.
  *
@@ -6,8 +5,6 @@
  * @returns {boolean} true: if the value is undefined. false: if the value is not undefined.
  */
 
-const isUndefined = value => {
-  return typeof(value) === 'undefined';
-}
+const isUndefined = (value) => typeof (value) === 'undefined';
 
 export default isUndefined;

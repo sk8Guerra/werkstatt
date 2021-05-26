@@ -6,8 +6,6 @@ import isTruthy from './isTruthy';
  * @returns {boolean} true: if the passed argument is falsy. false: if the argument is not falsy.
  */
 
-const isFalsy = (value) => {
-  return !isTruthy(value);
-};
+const isFalsy = (value) => !isTruthy(value);
 
 export default isFalsy;

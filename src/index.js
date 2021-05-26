@@ -1,4 +1,4 @@
-import isZero from './number/isZero'
+import isZero from './number/isZero';
 import add from './number/add';
 import subtract from './number/subtract';
 import divide from './number/divide';
@@ -13,9 +13,9 @@ import toFixed from './number/fixed/toFixed';
 import truncate from './number/truncate';
 import random from './number/random';
 
-import roundUp from  './float/roundUp';
+import roundUp from './float/roundUp';
 import roundDown from './float/roundDown';
-import round from './float/round'
+import round from './float/round';
 import isFloat from './float/isFloat';
 
 import capitalizeFirstLetter from './string/capitalizeFirstLetter';
@@ -87,7 +87,7 @@ export {
   isArray,
   uniquify,
   map,
-  
+
   typeOf,
   areEqual,
   isUndefined,
@@ -101,5 +101,5 @@ export {
   is,
 
   mergeDeep,
-  isObject
+  isObject,
 };

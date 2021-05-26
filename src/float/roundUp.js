@@ -1,4 +1,4 @@
-import isNumber from "../number/isNumber";
+import isNumber from '../number/isNumber';
 
 /**
  * Round up the number to next closest integer.
@@ -13,6 +13,6 @@ const roundUp = (value) => {
   }
 
   return 0;
-}
+};
 
 export default roundUp;

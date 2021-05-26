@@ -1,4 +1,3 @@
-
 /**
  * Check whether the passed value is null or not.
  *
@@ -9,8 +8,6 @@
 import areEqual from './areEqual';
 import typeOf from './typeOf';
 
-const isNull = value => {
-  return areEqual(typeOf(value), 'null');
-}
+const isNull = (value) => areEqual(typeOf(value), 'null');
 
 export default isNull;

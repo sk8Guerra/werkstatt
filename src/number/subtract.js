@@ -1,8 +1,8 @@
-import isNumber from "./isNumber";
+import isNumber from './isNumber';
 
 /**
  * Subtract two numbers.
- * 
+ *
  * NOTE: You can pass any amount of numbers, but only the first two will be subtracted.
  * In the future subtracting n amount of numbers will be supported.
  *
@@ -17,6 +17,6 @@ const subtract = (...values) => {
   }
 
   return 0;
-}
+};
 
 export default subtract;

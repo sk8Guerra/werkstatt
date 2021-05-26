@@ -1,10 +1,11 @@
-import isArray from "../array/isArray";
+import isArray from '../array/isArray';
 
 /**
  * Check if every passed argument is equal to each other.
- * 
+ *
  * @param {(number[]|string[]|boolean[])} values The values to check.
- * @returns {boolean} true: if every passed argument is equal to each other. false: if every passed argument is not equal to each other.
+ * @returns {boolean} true: if every passed argument is equal to each other.
+ *  false: if every passed argument is not equal to each other.
  */
 
 const areEqual = (...values) => {
@@ -12,14 +13,14 @@ const areEqual = (...values) => {
 
   if (isArray(firstValue)) {
     const [firstValueOfArray] = firstValue;
-    for(const element of firstValue) {
+    for (const element of firstValue) {
       if (element === firstValueOfArray) continue;
       else return false;
     }
     return true;
   }
 
-  for(const element of values) {
+  for (const element of values) {
     if (element === firstValue) continue;
     else return false;
   }
@@ -27,4 +28,3 @@ const areEqual = (...values) => {
 };
 
 export default areEqual;
-

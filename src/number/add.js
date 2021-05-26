@@ -15,11 +15,11 @@ import isArray from '../array/isArray';
 const add = (...values) => {
   const [value] = values;
   if (isArray(value) && isArrayOfNumbers(value)) {
-    return reduce(map(value, element => Number(element)));
+    return reduce(map(value, (element) => Number(element)));
   }
 
   if (isArrayOfNumbers(values)) {
-    return reduce(map(values, element => Number(element)));
+    return reduce(map(values, (element) => Number(element)));
   }
 
   return 0;

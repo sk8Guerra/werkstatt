@@ -1,4 +1,4 @@
-import isArray from "../array/isArray";
+import isArray from '../array/isArray';
 
 /**
  * Returns the largest value from a list of numbers.
@@ -12,7 +12,7 @@ const max = (...values) => {
   if (isArray(value)) {
     return Math.max.apply(Math, value);
   }
-  return Math.max.apply(Math, values); 
-}
+  return Math.max.apply(Math, values);
+};
 
 export default max;

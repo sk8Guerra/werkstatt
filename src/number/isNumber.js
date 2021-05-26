@@ -1,4 +1,3 @@
-
 /**
  * Check whether the passed argument is number or not.
  *

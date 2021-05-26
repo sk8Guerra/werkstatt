@@ -6,21 +6,22 @@ import typeOf from './typeOf';
  *
  * @param {(Object|array[]|String)} item The value to search on.
  * @param {string} propOrValue The value to look for.
- * @returns {boolean} true: if the second argument is contained in the first one. false: if the second argument is not contained in the first one. 
+ * @returns {boolean} true: if the second argument is contained in the first one.
+ *  false: if the second argument is not contained in the first one.
  */
 
 const has = (item, propOrValue) => {
   if (areEqual(typeOf(item), 'array')) {
     return item.includes(propOrValue);
   }
-  if(areEqual(typeOf(item), 'object')) {
+  if (areEqual(typeOf(item), 'object')) {
     return propOrValue in item;
   }
-  if(areEqual(typeOf(item), 'string')) {
+  if (areEqual(typeOf(item), 'string')) {
     return item.includes(propOrValue);
   }
 
-  return false
-}
+  return false;
+};
 
 export default has;

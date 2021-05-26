@@ -1,4 +1,4 @@
-import isDefined from "../other/isDefined";
+import isDefined from '../other/isDefined';
 
 /**
  * Get length of a JSON or an array.
@@ -8,14 +8,14 @@ import isDefined from "../other/isDefined";
  */
 
 const lengthOf = (value) => {
-  if(isDefined(value)) {
-    if(Object.getPrototypeOf(value) === Object.prototype) {
+  if (isDefined(value)) {
+    if (Object.getPrototypeOf(value) === Object.prototype) {
       return Object.keys(value).length;
     }
     return value.length;
   }
 
   return 0;
-}
+};
 
 export default lengthOf;

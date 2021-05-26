@@ -12,22 +12,21 @@ import isLengthOf from '../array/isLengthOf';
  * @returns {boolean} true: if the passed argument is truthy. false: if the argument is not truthy.
  */
 
-const isTruthy = value => {
+const isTruthy = (value) => {
   if (isUndefined(value) || isNull(value)) return false;
   if (areEqual(String(value), 'false')) return false;
-  if(isNumber(value)) {
-    if(isZero(value)) {
-     return false; 
-    } else {
-      return true;
+  if (isNumber(value)) {
+    if (isZero(value)) {
+      return false;
     }
+    return true;
   }
-  if(String(value) === 'NaN') return false;
-  if(typeOf(value) === 'string') {
-    if(isLengthOf(value, 0)) return false;
-    return true
+  if (String(value) === 'NaN') return false;
+  if (typeOf(value) === 'string') {
+    if (isLengthOf(value, 0)) return false;
+    return true;
   }
   return true;
-}
+};
 
 export default isTruthy;

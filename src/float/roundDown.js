@@ -1,4 +1,4 @@
-import isNumber from "../number/isNumber";
+import isNumber from '../number/isNumber';
 
 /**
  * Round down the number to the previous integer.
@@ -8,11 +8,11 @@ import isNumber from "../number/isNumber";
  */
 
 const roundDown = (value) => {
-  if(isNumber(value)) {
+  if (isNumber(value)) {
     return Math.floor(value);
   }
 
   return 0;
-}
+};
 
 export default roundDown;

@@ -1,5 +1,5 @@
-import isArray from "./isArray";
-import isNumber from "../number/isNumber";
+import isArray from './isArray';
+import isNumber from '../number/isNumber';
 
 /**
  * Inserts an element at the desired index.
@@ -11,13 +11,13 @@ import isNumber from "../number/isNumber";
  */
 
 function insertAt(array, index, elementToInsert) {
-  if(isArray(array) && isNumber(index)) {
-    let newArray = [...array];
+  if (isArray(array) && isNumber(index)) {
+    const newArray = [...array];
     newArray.splice(index, 0, elementToInsert);
     return newArray;
   }
 
   return array;
-};
+}
 
-export default insertAt
+export default insertAt;

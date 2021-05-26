@@ -1,4 +1,4 @@
-import isNumber from "../number/isNumber";
+import isNumber from '../number/isNumber';
 
 /**
  * Rounds the number to the nearest integer.
@@ -8,11 +8,11 @@ import isNumber from "../number/isNumber";
  */
 
 const round = (value) => {
-    if (isNumber(value)) {
-        return Math.round(value);
-    }
+  if (isNumber(value)) {
+    return Math.round(value);
+  }
 
-    return 0;
-}
-  
+  return 0;
+};
+
 export default round;

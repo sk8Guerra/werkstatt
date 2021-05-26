@@ -7,8 +7,6 @@ import typeOf from '../other/typeOf';
  * @returns {boolean} true: if the value is a string. false: if the value is not a string.
  */
 
-const isString = value => {
-    return typeOf(value) === 'string';
-};
+const isString = (value) => typeOf(value) === 'string';
 
 export default isString;

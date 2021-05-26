@@ -1,11 +1,12 @@
 import isNumber from '../number/isNumber';
-import isArray from "./isArray";
+import isArray from './isArray';
 
 /**
  * Check whether every element in the array is number type or not.
  *
  * @param {Array} array Array to check.
- * @returns {boolean} true: if every element in the array is number. false: if any element in the array is not number.
+ * @returns {boolean} true: if every element in the array is number.
+ *  false: if any element in the array is not number.
  */
 
 const isArrayOfNumbers = (array) => {
@@ -18,6 +19,6 @@ const isArrayOfNumbers = (array) => {
   }
 
   return false;
-}
+};
 
 export default isArrayOfNumbers;

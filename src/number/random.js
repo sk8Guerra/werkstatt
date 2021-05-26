@@ -1,4 +1,4 @@
-import toFixed from '../number/fixed/toFixed';
+import toFixed from './fixed/toFixed';
 import round from '../float/round';
 
 /**
@@ -14,7 +14,7 @@ const random = (lower, upper, precision) => {
   if (precision) {
     return toFixed(rndm, precision);
   }
-  return round(rndm)
+  return round(rndm);
 };
 
 export default random;

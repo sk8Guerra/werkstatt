@@ -1,4 +1,4 @@
-import isString from "./isString";
+import isString from './isString';
 
 /**
  * Capitalize the first letter of a string.

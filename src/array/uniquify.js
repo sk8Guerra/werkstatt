@@ -1,6 +1,6 @@
-import isArray from "./isArray";
-import areEqual from "../other/areEqual";
-import typeOf from "../other/typeOf";
+import isArray from './isArray';
+import areEqual from '../other/areEqual';
+import typeOf from '../other/typeOf';
 
 /**
  * Makes every object in the array unique.
@@ -11,14 +11,14 @@ import typeOf from "../other/typeOf";
  */
 
 const uniquify = (array, fn) => {
-    if (isArray(array) && areEqual(typeOf(fn), 'function')) {
-        return array.reduce((accumulator, currentValue) => {
-            if (!accumulator.some(element => fn(currentValue, element))) accumulator.push(currentValue);
-            return accumulator;
-        }, []);
-    }
+  if (isArray(array) && areEqual(typeOf(fn), 'function')) {
+    return array.reduce((accumulator, currentValue) => {
+      if (!accumulator.some((element) => fn(currentValue, element))) accumulator.push(currentValue);
+      return accumulator;
+    }, []);
+  }
 
-    return []
-}
+  return [];
+};
 
 export default uniquify;

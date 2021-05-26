@@ -8,9 +8,9 @@ import typeOf from './typeOf';
  * @returns {boolean} true: if the value is defined. false: if the value is not defined.
  */
 
-const isDefined = value => {
+const isDefined = (value) => {
   if (areEqual(typeOf(value), 'undefined') || areEqual(typeOf(value), 'null')) return false;
   return true;
-}
+};
 
 export default isDefined;
