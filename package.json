@@ -50,6 +50,7 @@
     "@babel/plugin-proposal-throw-expressions": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.14.0",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-es2015": "^7.0.0-beta.53",
     "all": "0.0.0",
@@ -58,7 +59,7 @@
     "babel-loader": "^8.1.0",
     "commitizen": "^4.2.1",
     "cz-conventional-changelog": "^3.3.0",
-    "jest": "^26.2.2",
+    "jest": "^26.6.3",
     "json-loader": "^0.5.7",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
@@ -72,32 +73,6 @@
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
     }
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "modules": false
-        }
-      ]
-    ],
-    "plugins": [
-      "@babel/plugin-syntax-dynamic-import",
-      "@babel/plugin-syntax-import-meta",
-      "@babel/plugin-proposal-class-properties",
-      "@babel/plugin-proposal-json-strings",
-      [
-        "@babel/plugin-proposal-decorators",
-        {
-          "legacy": true
-        }
-      ],
-      "@babel/plugin-proposal-function-sent",
-      "@babel/plugin-proposal-export-namespace-from",
-      "@babel/plugin-proposal-numeric-separator",
-      "@babel/plugin-proposal-throw-expressions"
-    ]
   },
   "dependencies": {}
 }

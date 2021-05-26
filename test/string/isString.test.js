@@ -1,4 +1,4 @@
-const { isString } = require('../../dist');
+import { isString } from '../../dist';
 
 test('if the passed argument is a string', () => {
     expect(isString('hola')).toEqual(true);
