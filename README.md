@@ -15,7 +15,10 @@ Clearly, `null` is not an object. More of that 👉🏼[here](https://2ality.com
 
 This is then, a package that encapsulates conditionals, but also other util functions.
 
-> ⚠️ WARNING: This is also a proof of concept. Some of the functions' names may not make all the sense to you or also may be many breaking changes.
+> ⚠️ WARNING:
+>
+> 1. This is also a proof of concept. Some of the functions' names may not make all the sense to you or also may be many breaking changes.
+> 2. This has been build on `ES2015 modules` to enable [tree shaking](https://webpack.js.org/guides/tree-shaking/)
 
 ## 📦 Install
 
@@ -64,7 +67,6 @@ const { isZero } = require("werkstatt");
 isZero(7); // -> false
 isZero(0); // -> true
 ```
-
 
 </details>
 
@@ -506,7 +508,7 @@ is([3]).tring; // -> false
 That means that those values _tend to_ to be false. So if you pass as parameter to `isTruthy` function any of those values, it will return `false`. All other values are considered `true`.
 
 ```javascript
-const { isTruthy } = require('werkstatt');
+const { isTruthy } = require("werkstatt");
 
 isTruthy(3); // -> true
 isTruthy({}); // -> true
@@ -514,10 +516,10 @@ isTruthy({}); // -> true
 isTruthy(undefined); // -> false
 isTruthy(null); // -> false
 isTruthy(false); // -> false
-isTruthy(Number('hola')); // -> false
+isTruthy(Number("hola")); // -> false
 isTruthy(0); // -> false
 isTruthy(-0); // -> false
-isTruthy(''); // -> false
+isTruthy(""); // -> false
 ```
 
 </details>
@@ -528,11 +530,10 @@ isTruthy(''); // -> false
 Exactly the opposite of `isTruthy`.
 
 ```javascript
-const { isFalsy } = require('werkstatt');
+const { isFalsy } = require("werkstatt");
 
 isFalsy(3); // -> false
 isFalsy(null); // -> true
-
 ```
 
 </details>
@@ -597,7 +598,7 @@ Or use the `.lengthOf prop` exposed by the `is()` function.
 ```javascript
 const { is } = require("werkstatt");
 
-is(2).lengthOf([1, 2]) // -> true
+is(2).lengthOf([1, 2]); // -> true
 ```
 
 </details>
