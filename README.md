@@ -17,8 +17,7 @@ This is then, a package that encapsulates conditionals, but also other util func
 
 > ⚠️ WARNING:
 >
-> 1. This is also a proof of concept. Some of the functions' names may not make all the sense to you or also may be many breaking changes.
-> 2. This has been build on `ES2015 modules` to enable [tree shaking](https://webpack.js.org/guides/tree-shaking/)
+> This is also a proof of concept. Some of the functions' names may not make all the sense to you or also may be many breaking changes.
 
 ## 📦 Install
 
