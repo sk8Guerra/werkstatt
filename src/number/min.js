@@ -3,7 +3,7 @@ import isArray from '../array/isArray';
 /**
  * Returns the lowest-valued number passed into it.
  *
- * @param {Array<number>} values Values to check.
+ * @param {Array<number> } values Values to check.
  * @returns {number} The lowest-valued number.
  */
 
