@@ -1,13 +1,13 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
-  mode: "production",
-  entry: "./src/index.js",
+  mode: 'production',
+  entry: './src/index.js',
   output: {
-    filename: "werkstatt.js",
-    path: path.resolve(__dirname, "dist"),
-    library: "werkstatt",
-    libraryTarget: "umd"
+    filename: 'werkstatt.js',
+    path: path.resolve(__dirname, 'dist'),
+    library: 'werkstatt',
+    libraryTarget: 'umd',
   },
   module: {
     rules: [
@@ -17,14 +17,14 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
       {
         test: /\.json5$/i,
-        loader: 'json-loader'
-      }
-    ]
+        loader: 'json-loader',
+      },
+    ],
   },
 };
