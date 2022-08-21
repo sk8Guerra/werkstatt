@@ -490,6 +490,24 @@ is([3]).tring; // -> false
 
 </details>
 
+<details>
+<summary><strong>slugify</strong></summary>
+
+##### Arguments
+
+| argument | type | description                          | returns |
+| -------- | ---- | ------------------------------------ | ------- |
+| value    | string  | string joined by - character | string |
+
+```javascript
+const { slufigy } = require("werkstatt");
+
+slufigy("Hola Mundo"); // -> hola-mundo
+slufigy("Verbos modales en ingles"); // -> verbos-modales-en-ingles 
+```
+
+</details>
+
 ### Boolean
 
 <details>
