@@ -1,4 +1,4 @@
-import join from './join';
+const { join } = require('../../dist');
 
 describe('join', () => {
   const array = ['a', 'b', 'c'];

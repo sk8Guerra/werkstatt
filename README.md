@@ -497,13 +497,31 @@ is([3]).tring; // -> false
 
 | argument | type | description                          | returns |
 | -------- | ---- | ------------------------------------ | ------- |
-| value    | string  | string joined by - character | string |
+| value    | string  | string to be slugified | string |
 
 ```javascript
 const { slufigy } = require("werkstatt");
 
 slufigy("Hola Mundo"); // -> hola-mundo
 slufigy("Verbos modales en ingles"); // -> verbos-modales-en-ingles 
+```
+
+</details>
+
+<details>
+<summary><strong>toString</strong></summary>
+
+##### Arguments
+
+| argument | type | description                          | returns |
+| -------- | ---- | ------------------------------------ | ------- |
+| value    | any  | value to be converted to string | string |
+
+```javascript
+const { toString } = require("werkstatt");
+
+toString(123); // -> "123"
+toString({ greeting: 'hola' }); // -> '{"greeting":"hola"}'
 ```
 
 </details>
@@ -747,6 +765,78 @@ const { map } = require("werkstatt");
 
 const numbers = [1, 2, 3];
 map(numbers, (x) => x * 2); // -> [2, 4, 6]
+```
+
+</details>
+
+<details>
+<summary><strong>last</strong></summary>
+
+##### Arguments
+
+| argument  | type  | description                               |
+| --------- | ----- | ----------------------------------------- |
+| array     | array | Array to be processed                     |
+
+```javascript
+const { last } = require("werkstatt");
+
+const numbers = [1, 2, 3];
+last(numbers); // -> [3]
+```
+
+</details>
+
+<details>
+<summary><strong>join</strong></summary>
+
+##### Arguments
+
+| argument  | type  | description                               |
+| --------- | ----- | ----------------------------------------- |
+| array     | array | Array to be processed                     |
+
+```javascript
+const { join } = require("werkstatt");
+
+const array = ['a', 'b', 'c'];
+join(array); // -> abc
+join(array, '-'); // -> a-b-c
+```
+
+</details>
+
+<details>
+<summary><strong>union</strong></summary>
+
+##### Arguments
+
+| argument  | type  | description                               |
+| --------- | ----- | ----------------------------------------- |
+| array     | array | Array to be processed                     |
+
+```javascript
+const { union } = require("werkstatt");
+
+union(['a', 'b', 'c'], ['a', 'z', 'x']); // -> ['a', 'b', 'c', 'z', 'x']
+
+```
+
+</details>
+
+<details>
+<summary><strong>intersection</strong></summary>
+
+##### Arguments
+
+| argument  | type  | description                               |
+| --------- | ----- | ----------------------------------------- |
+| array     | array | Array to be processed                     |
+
+```javascript
+const { intersection } = require("werkstatt");
+
+intersection(['a', 'b', 'c'], ['a', 'z', 'x']); // -> ['a']
 ```
 
 </details>

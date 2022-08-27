@@ -1,4 +1,4 @@
-import slugify from './slugify';
+const { slugify } = require('../../dist');
 
 describe('slugify', () => {
   const string = 'Hello World';

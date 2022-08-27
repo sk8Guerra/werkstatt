@@ -1,4 +1,4 @@
-import last from './last';
+const { last } = require('../../dist');
 
 describe('last', () => {
   const array = ['a', 'b', 'c'];

@@ -12,5 +12,6 @@ module.exports = {
   },
   rules: {
     'no-undef': 'off',
+    'valid-typeof': ['error', { requireStringLiterals: false }],
   },
 };

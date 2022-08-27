@@ -35,13 +35,9 @@ test('if the passed value of type \'array\'', () => {
 });
 
 test('if the passed value of type \'object\'', () => {
-  expect(typeOf({ name: "Jorge" })).toEqual('object');
+  expect(typeOf({ name: 'Jorge' })).toEqual('object');
 });
 
-test('if the passed value of type \'object\'', () => {
-  expect(typeOf(new Date())).toEqual('object');
+test('if the passed value of type \'date\'', () => {
+  expect(typeOf(new Date())).toEqual('date');
 });
-  
-  
-  
-  

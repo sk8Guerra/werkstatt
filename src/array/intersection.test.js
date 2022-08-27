@@ -1,4 +1,4 @@
-import intersection from './intersection';
+const { intersection } = require('../../dist');
 
 describe('intersection', () => {
   it('should return an intersection between 2 sets', () => {

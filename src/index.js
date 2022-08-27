@@ -21,6 +21,8 @@ import isFloat from './float/isFloat';
 import capitalizeFirstLetter from './string/capitalizeFirstLetter';
 import isEmail from './string/isEmail';
 import isString from './string/isString';
+import slugify from './string/slugify';
+import toString from './string/toString';
 
 import isTruthy from './boolean/isTruthy';
 import isFalsy from './boolean/isFalsy';
@@ -34,6 +36,10 @@ import toArray from './array/toArray';
 import isArray from './array/isArray';
 import uniquify from './array/uniquify';
 import map from './array/map';
+import intersection from './array/intersection';
+import join from './array/join';
+import last from './array/last';
+import union from './array/union';
 
 import typeOf from './other/typeOf';
 import areEqual from './other/areEqual';
@@ -74,6 +80,8 @@ export {
   capitalizeFirstLetter,
   isEmail,
   isString,
+  slugify,
+  toString,
 
   isTruthy,
   isFalsy,
@@ -87,6 +95,10 @@ export {
   isArray,
   uniquify,
   map,
+  intersection,
+  union,
+  last,
+  join,
 
   typeOf,
   areEqual,

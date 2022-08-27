@@ -1,4 +1,4 @@
-import union from './union';
+const { union } = require('../../dist');
 
 describe('union', () => {
   it('should return an union between n amount of sets', () => {
