@@ -12,10 +12,10 @@ import typeOf from '../other/typeOf';
 
 const map = (array, transform) => {
   if (isArray(array) && areEqual(typeOf(transform), 'function')) {
-    const mapped = []; let
-      index;
+    const mapped = [];
+    let index;
     for (index = 0; index < array.length; index++) {
-      mapped.push(transform(array[index]));
+      mapped.push(transform(array[index], index));
     }
     return mapped;
   }
