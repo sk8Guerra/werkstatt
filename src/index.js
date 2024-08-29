@@ -40,6 +40,7 @@ import intersection from './array/intersection';
 import join from './array/join';
 import last from './array/last';
 import union from './array/union';
+import filter from './array/filter';
 
 import typeOf from './other/typeOf';
 import areEqual from './other/areEqual';
@@ -99,6 +100,7 @@ export {
   union,
   last,
   join,
+  filter,
 
   typeOf,
   areEqual,

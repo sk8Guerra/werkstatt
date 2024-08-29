@@ -14,7 +14,7 @@ const map = (array, transform) => {
   if (isArray(array) && areEqual(typeOf(transform), 'function')) {
     const mapped = [];
     let index;
-    for (index = 0; index < array.length; index++) {
+    for (index = 0; index < array.length; index += 1) {
       mapped.push(transform(array[index], index));
     }
     return mapped;
